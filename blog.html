@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Artículos y noticias sobre mecánica de suelos, análisis de agua y normativas ambientales. Lab CIPDA Blog.">
+    <title>Blog - Laboratorio CIPDA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            height: 40vh;
+            min-height: 400px;
+            position: relative;
+            background: linear-gradient(rgba(10, 36, 99, 0.8), rgba(10, 36, 99, 0.6)), url('imagenes/hero_1.png') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="index.html"
+                    style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="imagenes/LOGO.png" alt="Logo Laboratorio">
+                    <span>Lab CIPDA</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#cotizacion" class="nav-link">Cotización</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="blog-hero">
+        <div class="container fade-in">
+            <h1>Blog & Noticias</h1>
+            <p>Novedades, artículos técnicos y actualizaciones sobre ingeniería y medio ambiente</p>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+                <!-- Artículo 1 -->
+                <article class="service-card" style="text-align: left; padding: 0; overflow: hidden;">
+                    <img src="imagenes/CBR_CANTERA.jpeg" alt="Estudio de Suelos"
+                        style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <span style="color: var(--color-primary); font-size: 0.9em; font-weight: bold;">Geotecnia</span>
+                        <h3 style="margin: 10px 0;">Importancia del Estudio de Suelos antes de Construir</h3>
+                        <p style="margin-bottom: 20px;">Descubre por qué es fundamental analizar el terreno para
+                            garantizar la seguridad y estabilidad de cualquier edificación.</p>
+                        <a href="articulo-suelos.html" class="btn btn-outline"
+                            style="padding: 0.5rem 1rem; font-size: 0.9em;">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="service-card" style="text-align: left; padding: 0; overflow: hidden;">
+                    <img src="imagenes/ensayo_humedad.jpeg" alt="Análisis de Agua"
+                        style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <span style="color: var(--color-secondary); font-size: 0.9em; font-weight: bold;">Medio
+                            Ambiente</span>
+                        <h3 style="margin: 10px 0;">Calidad del Agua: Parámetros Clave</h3>
+                        <p style="margin-bottom: 20px;">Conoce los indicadores fisicoquímicos y microbiológicos
+                            esenciales para determinar la potabilidad del agua según normativa vigente.</p>
+                        <a href="articulo-suelos.html" class="btn btn-outline"
+                            style="padding: 0.5rem 1rem; font-size: 0.9em;">Leer más</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 (Placeholder) -->
+                <article class="service-card" style="text-align: left; padding: 0; overflow: hidden;">
+                    <img src="imagenes/refraccion_sismica.jpeg" alt="Trabajo de Campo"
+                        style="width: 100%; height: 200px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <span
+                            style="color: var(--color-highlight); font-size: 0.9em; font-weight: bold;">Ingeniería</span>
+                        <h3 style="margin: 10px 0;">Métodos de Exploración Geofísica</h3>
+                        <p style="margin-bottom: 20px;">Una introducción a la refracción sísmica y cómo ayuda a
+                            caracterizar el subsuelo sin excavaciones invasivas.</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9em;">Leer más</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Laboratorio CIPDA</h4>
+                    <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                    <p>Servicios profesionales de análisis y estudios especializados</p>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <p>📧cipdalab@gmail.com</p>
+                    <p>📱 921593127</p>
+                    <p>Huaraz-Perú</p>
+                </div>
+                <div>
+                    <h4>Servicios</h4>
+                    <p><a href="index.html#servicios">Mecánica de Suelos</a></p>
+                    <p><a href="index.html#servicios">Análisis de Agua</a></p>
+                    <p><a href="index.html#servicios">Calidad del Aire</a></p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Laboratorio CIPDA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script to handle mobile toggle since we are reusing styles but maybe not all script logic target matches
+        document.addEventListener('DOMContentLoaded', () => {
+            // Init other logic if needed, e.g. clean up quote script errors in blog page
+        });
+    </script>
+</body>
+
+</html>

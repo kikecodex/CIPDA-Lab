@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Artículo sobre la importancia de la mecánica de suelos en proyectos de construcción.">
+    <title>Importancia del Estudio de Suelos - Blog CIPDA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-hero {
+            height: 50vh;
+            min-height: 400px;
+            position: relative;
+            background: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.5)), url('imagenes/blog_1.png') center/cover;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            padding-bottom: 3rem;
+        }
+
+        .article-content {
+            max-width: 800px;
+            /* Ancho de lectura óptimo */
+            margin: -60px auto 0;
+            /* Superposición sobre el hero */
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 10;
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .article-tag {
+            background-color: var(--color-bg-light);
+            color: var(--color-primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .article-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .article-text h2 {
+            color: var(--color-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-content {
+                margin: 0;
+                padding: 20px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="index.html"
+                    style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="imagenes/LOGO.png" alt="Logo Laboratorio">
+                    <span>Lab CIPDA</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#cotizacion" class="nav-link">Cotización</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+        <div class="container fade-in">
+            <h1 style="max-width: 800px; margin: 0 auto; font-size: 2.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                Importancia del Estudio de Suelos antes de Construir</h1>
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <article class="article-content fade-in">
+                <div class="article-meta">
+                    <span class="article-tag">Geotecnia</span>
+                    <span>📅 12 Diciembre, 2025</span>
+                    <span>✍️ Ing. Civil CIPDA</span>
+                </div>
+
+                <div class="article-text">
+                    <p class="lead" style="font-size: 1.2rem; font-weight: 500; color: var(--color-text-dark);">
+                        El estudio de mecánica de suelos es el primer paso crítico en cualquier proyecto de
+                        construcción, desde una vivienda unifamiliar hasta grandes infraestructuras. Ignorarlo puede
+                        resultar en costos catastróficos.
+                    </p>
+
+                    <h2>¿Qué es un Estudio de Mecánica de Suelos?</h2>
+                    <p>
+                        Es un conjunto de actividades de campo y laboratorio que nos permiten conocer las propiedades
+                        físicas y mecánicas del terreno donde se proyecta edificar. A través de este estudio podemos
+                        determinar la capacidad portante del suelo, es decir, cuánto peso puede resistir sin sufrir
+                        deformaciones peligrosas.
+                    </p>
+
+                    <img src="imagenes/hero_3.png" alt="Trabajo de campo"
+                        style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
+
+                    <h2>Riesgos de construir sin estudio</h2>
+                    <p>
+                        Construir sin conocer el suelo es como navegar sin brújula. Los principales riesgos incluyen:
+                    </p>
+                    <ul>
+                        <li><strong>Asentamientos diferenciales:</strong> Hundimientos desiguales de la edificación que
+                            provocan grietas severas.</li>
+                        <li><strong>Colapso de estructuras:</strong> En casos extremos, el suelo puede fallar
+                            repentinamente.</li>
+                        <li><strong>Sobrecostos:</strong> Diseñar cimentaciones "por si acaso" puede ser mucho más
+                            costoso que hacer el diseño óptimo basado en datos reales.</li>
+                    </ul>
+
+                    <h2>Nuestra Metodología</h2>
+                    <p>
+                        En Laboratorio CIPDA seguimos rigurosos estándares internacionales (ASTM) y normativas
+                        nacionales. Realizamos sondeos, calicatas, ensayos de penetración estándar (SPT) y pruebas de
+                        laboratorio completas (granulometría, límites, triaxiales) para entregarle un informe detallado
+                        con recomendaciones claras de cimentación.
+                    </p>
+
+                    <div class="service-cta-block">
+                        <h3>¿Tiene un proyecto en mente?</h3>
+                        <p>No arriesgue su inversión. Solicite una cotización para su estudio de suelos con nosotros.
+                        </p>
+                        <a href="index.html#cotizacion" class="btn btn-primary">Solicitar Cotización</a>
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 3rem 0;">
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <a href="blog.html" class="btn btn-outline">← Volver al Blog</a>
+                    <div style="display: flex; gap: 10px;">
+                        <span>Compartir:</span>
+                        <a href="#" style="text-decoration: none;">📘</a>
+                        <a href="#" style="text-decoration: none;">💼</a>
+                        <a href="#" style="text-decoration: none;">📧</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Laboratorio CIPDA</h4>
+                    <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <p>📧cipdalab@gmail.com</p>
+                    <p>📱 921593127</p>
+                </div>
+                <div>
+                    <h4>Enlaces</h4>
+                    <p><a href="index.html">Inicio</a></p>
+                    <p><a href="blog.html">Blog</a></p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Laboratorio CIPDA.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

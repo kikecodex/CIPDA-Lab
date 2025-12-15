@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laboratorio especializado en mecánica de suelos, análisis de agua y calidad del aire. Servicios profesionales de análisis y estudios geotécnicos.">
+    <meta name="keywords"
+        content="laboratorio, mecánica de suelos, análisis de agua, calidad del aire, sondajes, refracción sísmica, batimetría">
+    <title>Laboratorio de Mecánica de Suelos, Agua y Aire</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EngineeringService",
+      "name": "Laboratorio CIPDA",
+      "image": "imagenes/LOGO.png",
+      "description": "Laboratorio de Mecánica de Suelos, Agua y Aire en Huaraz. Servicios de calidad certificada.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Confraternidad Int. Oeste 589",
+        "addressLocality": "Huaraz",
+        "addressRegion": "Ancash",
+        "postalCode": "02001",
+        "addressCountry": "PE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -9.5298,
+        "longitude": -77.5281
+      },
+      "url": "https://cipdalab.com",
+      "telephone": "+51921593127",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:30",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio">
+                <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#cotizacion" class="nav-link">Cotización</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-carousel">
+            <div class="hero-slide active" style="background-image: url('imagenes/Analisis_granulometrico.jpeg')"></div>
+            <div class="hero-slide" style="background-image: url('imagenes/CBR_CANTERA.jpeg')"></div>
+            <div class="hero-slide" style="background-image: url('imagenes/muestra2.jpeg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container">
+            <h1>Laboratorio de Mecánica de Suelos, Agua y Aire</h1>
+            <p>Soluciones profesionales de análisis y estudios especializados con tecnología de punta y personal
+                altamente calificado</p>
+            <div class="hero-buttons">
+                <a href="#cotizacion" class="btn btn-primary">Solicitar Cotización</a>
+                <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- TRUSTED CLIENTS -->
+    <section class="clients-section">
+        <div class="container clients-container">
+            <span style="font-weight: 600; color: var(--color-text-secondary); margin-right: 1rem;">Confían en
+                nosotros:</span>
+            <div class="client-logo">MUNICIPALIDAD DE HUARAZ</div>
+            <div class="client-logo">ANTAMINA</div>
+            <div class="client-logo">BARRICK</div>
+            <div class="client-logo">MINISTERIO VIVIENDA</div>
+            <div class="client-logo">UNASAM</div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <h2 class="text-center mb-lg">Nuestros Servicios</h2>
+
+            <div class="services-grid">
+                <!-- Mecánica de Suelos -->
+                <div class="service-card fade-in">
+                    <div class="service-image-container">
+                        <img src="imagenes/diamantina4.jpeg" alt="Mecánica de Suelos" class="service-img main">
+                        <img src="imagenes/densidad_4.jpeg" alt="Densidad de Suelos" class="service-img hover">
+                    </div>
+                    <h3><a href="articulo-suelos.html" style="text-decoration: none; color: inherit;"></a>Mecánica de
+                        Suelos y Geotecnia</a></h3>
+                    <ul>
+                        <li>Análisis granulométrico</li>
+                        <li>Límites de Atterberg</li>
+                        <li>Compactación Proctor</li>
+                        <li>CBR (California Bearing Ratio)</li>
+                        <li>Permeabilidad</li>
+                        <li>Consolidación</li>
+                        <li>Corte directo y triaxial</li>
+                        <li>Sondajes (exploración del subsuelo)</li>
+                    </ul>
+                    <a href="articulo-suelos.html" class="btn btn-outline btn-sm">Ver detalles →</a>
+                </div>
+
+                <!-- Refracción Sísmica -->
+                <div class="service-card fade-in">
+                    <div class="service-image-container">
+                        <img src="imagenes/refraccion_sismica.jpeg" alt="Refracción Sísmica" class="service-img main">
+                        <img src="imagenes/perforacioneje3.jpeg" alt="Equipos Sísmicos" class="service-img hover">
+                    </div>
+                    <h3><a href="refraccion-sismica.html" style="text-decoration: none; color: inherit;">Estudios de
+                            Refracción Sísmica</a></h3>
+                    <ul>
+                        <li>Estudios para cimentaciones profundas</li>
+                    </ul>
+                    <a href="refraccion-sismica.html" class="btn btn-outline btn-sm">Ver detalles →</a>
+                </div>
+
+                <!-- Perforación Diamantina -->
+                <div class="service-card fade-in">
+                    <div class="service-image-container">
+                        <img src="imagenes/diamantina4.jpeg" alt="Perforación Diamantina" class="service-img main">
+                        <img src="imagenes/perforacioneje3.jpeg" alt="Testigos de Roca" class="service-img hover">
+                    </div>
+                    <h3><a href="perforacion-diamantina.html" style="text-decoration: none; color: inherit;">Perforación
+                            Diamantina</a></h3>
+                    <ul>
+                        <li>Recuperación de testigos (HQ, NQ, BQ)</li>
+                        <li>Exploración geotécnica profunda</li>
+                        <li>Instalación de piezómetros</li>
+                        <li>Ensayos de permeabilidad Lugeon</li>
+                        <li>Orientación de testigos</li>
+                    </ul>
+                    <a href="perforacion-diamantina.html" class="btn btn-outline btn-sm">Ver detalles →</a>
+                </div>
+
+                <!-- Batimetría -->
+                <div class="service-card fade-in">
+                    <div class="service-image-container">
+                        <img src="imagenes/perforacion_rio_puente_clarita.png" alt="Batimetría"
+                            class="service-img main">
+                        <img src="imagenes/topo.jpg" alt="Levantamiento Acuático" class="service-img hover">
+                    </div>
+                    <h3><a href="batimetria.html" style="text-decoration: none; color: inherit;">Batimetría</a></h3>
+                    <ul>
+                        <li>Mapeo subacuático</li>
+                    </ul>
+                    <a href="batimetria.html" class="btn btn-outline btn-sm">Ver detalles →</a>
+                </div>
+
+                <!-- Análisis de Agua -->
+                <div class="service-card fade-in" style="animation-delay: 0.2s;">
+                    <div class="service-image-container">
+                        <img src="imagenes/topo.jpg" alt="Análisis de Agua" class="service-img main">
+                        <img src="imagenes/cajaconmuestras1.jpeg" alt="Muestras de Agua" class="service-img hover">
+                    </div>
+                    <h3>Análisis de Agua</h3>
+                    <ul>
+                        <li>Análisis fisicoquímico completo</li>
+                        <li>Análisis microbiológico</li>
+                        <li>Estudios de potabilidad</li>
+                        <li>Análisis de aguas residuales</li>
+                        <li>Determinación de dureza</li>
+                        <li>Medición de pH y conductividad</li>
+                        <li>Análisis de metales pesados</li>
+                        <li>DBO y DQO</li>
+                    </ul>
+                </div>
+
+                <!-- Calidad del Aire -->
+                <div class="service-card fade-in" style="animation-delay: 0.4s;">
+                    <div class="service-image-container">
+                        <img src="imagenes/muestra2.jpeg" alt="Calidad del Aire" class="service-img main">
+                        <img src="imagenes/refraccion_sismica.jpeg" alt="Equipos de Medición" class="service-img hover">
+                    </div>
+                    <h3>Calidad del Aire</h3>
+                    <ul>
+                        <li>Material particulado (PM2.5, PM10)</li>
+                        <li>Gases contaminantes (CO, NOx, SO2)</li>
+                        <li>Monitoreo de ruido ambiental</li>
+                        <li>Calidad del aire interior</li>
+                        <li>Estudios de emisiones</li>
+                        <li>Monitoreo continuo</li>
+                        <li>Evaluación de olores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE PROYECTOS -->
+    <section class="section" style="background: var(--color-bg-light);" id="galeria">
+        <div class="container">
+            <h2 class="text-center mb-lg">Galería de Proyectos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="imagenes/Analisis_granulometrico.jpeg" alt="Análisis Granulométrico"
+                        class="gallery-img main">
+                    <img src="imagenes/ensayo_humedad.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.1s;">
+                    <img src="imagenes/CBR_CANTERA.jpeg" alt="Ensayo CBR" class="gallery-img main">
+                    <img src="imagenes/densidad_4.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.2s;">
+                    <img src="imagenes/diamantina4.jpeg" alt="Perforación Diamantina" class="gallery-img main">
+                    <img src="imagenes/perforacioneje3.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.3s;">
+                    <img src="imagenes/topo.jpg" alt="Topografía" class="gallery-img main">
+                    <img src="imagenes/Perforacion_puente_clarita.png" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.4s;">
+                    <img src="imagenes/muestra2.jpeg" alt="Toma de Muestras" class="gallery-img main">
+                    <img src="imagenes/cajaconmuestras1.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.5s;">
+                    <img src="imagenes/densidad_4.jpeg" alt="Laboratorio" class="gallery-img main">
+                    <img src="imagenes/cono.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.5s;">
+                    <img src="imagenes/diamantina4.jpeg" alt="Laboratorio" class="gallery-img main">
+                    <img src="imagenes/refraccion_sismica.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.5s;">
+                    <img src="imagenes/perforacioneje3.jpeg" alt="Laboratorio" class="gallery-img main">
+                    <img src="imagenes/cajaconmuestras1.jpeg" alt="Detalle" class="gallery-img hover">
+                </div>
+                <div class="gallery-item fade-in" style="animation-delay: 0.5s;">
+                    <img src="imagenes/muestra2.jpeg" alt="Laboratorio" class="gallery-img main">
+                    <img src="imagenes/topo.jpg" alt="Detalle" class="gallery-img hover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section testimonials-section" id="testimonios">
+        <div class="container">
+            <h2 class="text-center mb-lg">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Excelente servicio, los resultados de los análisis de agua fueron
+                        entregados puntualmente y con un informe muy detallado. Altamente recomendados."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JC</div>
+                        <div class="author-info">
+                            <h4>Juan Carlos Pérez</h4>
+                            <span>Ingeniero Civil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Contratamos el estudio de mecánica de suelos para nuestro proyecto
+                        inmobiliario y quedamos muy satisfechos con la profesionalidad y rapidez."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>María Rodríguez</h4>
+                            <span>Arquitecta</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Laboratorio confiable y con equipos modernos. Totalmente recomendado
+                        para estudios de impacto ambiental y monitoreo de calidad de aire."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LA</div>
+                        <div class="author-info">
+                            <h4>Luis Alvarez</h4>
+                            <span>Consultor Ambiental</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SISTEMA DE COTIZACIÓN -->
+    <section class="quote-section" id="cotizacion">
+        <div class="container">
+            <h2 class="text-center mb-lg">Solicitar Cotización</h2>
+
+            <div class="quote-container">
+                <!-- Encabezado de Cotización con Logo -->
+                <div class="quote-header-logo text-center" style="margin-bottom: 2rem; display: none;">
+                    <img src="imagenes/LOGO.png" alt="Lab CIPDA" style="height: 80px; margin: 0 auto;">
+                    <h3 style="margin-top: 1rem; color: var(--color-primary);">Cotización de Servicios</h3>
+                </div>
+
+                <!-- Servicios Frecuentes (Quick Add) -->
+                <div class="quick-services mb-lg dont-print">
+                    <h4 style="margin-bottom: 1rem; color: var(--color-text-secondary);">Servicios Frecuentes:</h4>
+                    <div class="quick-service-grid">
+                        <button class="btn-chip" onclick="addQuickService('Análisis Granulométrico')">+
+                            Granulometría</button>
+                        <button class="btn-chip" onclick="addQuickService('Límites de Atterberg')">+ Límites
+                            Atterberg</button>
+                        <button class="btn-chip" onclick="addQuickService('Compactación Proctor')">+ Proctor</button>
+                        <button class="btn-chip" onclick="addQuickService('CBR')">+ CBR</button>
+                        <button class="btn-chip" onclick="addQuickService('Análisis Fisicoquímico Agua')">+ FQ
+                            Agua</button>
+                        <button class="btn-chip" onclick="addQuickService('Refracción Sísmica')">+ Refracción
+                            Sísmica</button>
+                    </div>
+                </div>
+
+                <!-- Datos del Cliente -->
+                <h3 style="margin-bottom: 1.5rem; color: var(--color-primary);">Datos del Cliente</h3>
+                <form class="quote-form" id="quoteForm">
+                    <div class="form-group">
+                        <label for="clientName">Nombre / Razón Social *</label>
+                        <input type="text" id="clientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientRUC">RUC *</label>
+                        <input type="text" id="clientRUC" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientEmail">Email *</label>
+                        <input type="email" id="clientEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPhone">Teléfono *</label>
+                        <input type="tel" id="clientPhone" required>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="clientAddress">Dirección</label>
+                        <input type="text" id="clientAddress">
+                    </div>
+                </form>
+
+                <!-- Tabla de Servicios -->
+                <h3 style="margin: 2rem 0 1rem; color: var(--color-primary);">Servicios Solicitados</h3>
+                <div class="quote-table-wrapper">
+                    <table class="quote-table" id="quoteTable">
+                        <thead>
+                            <tr>
+                                <th style="width: 40%;">Descripción del Servicio</th>
+                                <th style="width: 15%;">Cantidad</th>
+                                <th style="width: 20%;">Precio Unitario</th>
+                                <th style="width: 20%;">Subtotal</th>
+                                <th style="width: 5%;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="quoteTableBody">
+                            <tr>
+                                <td><input type="text" class="item-description"
+                                        placeholder="Ej: Análisis granulométrico"></td>
+                                <td><input type="number" class="item-quantity" value="1" min="1"></td>
+                                <td><input type="number" class="item-price" placeholder="0" min="0"></td>
+                                <td class="item-subtotal">$0</td>
+                                <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn btn-add" onclick="addRow()">+ Agregar Servicio</button>
+
+                <!-- Totales -->
+                <div class="quote-totals">
+                    <div class="total-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0</span>
+                    </div>
+                    <div class="total-row">
+                        <span>IGV (18%):</span>
+                        <span id="igv">$0</span>
+                    </div>
+                    <div class="total-row final">
+                        <span>TOTAL:</span>
+                        <span id="total">$0</span>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="quote-actions">
+                    <button class="btn btn-primary btn-print" onclick="printQuote()">🖨️ Imprimir / Descargar
+                        PDF</button>
+                    <button class="btn btn-whatsapp" onclick="shareWhatsApp()">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                        Compartir por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="section faq-section">
+        <div class="container faq-container">
+            <h2 class="text-center mb-lg">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question">¿Cuál es el tiempo de entrega de los resultados?</button>
+                <div class="faq-answer">
+                    <p>El tiempo de entrega varía según el tipo de análisis. Para análisis de agua estándar toma 3-5
+                        días hábiles, mientras que estudios de mecánica de suelos pueden tomar de 1 a 2 semanas
+                        dependiendo de la complejidad.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Recogen muestras a domicilio?</button>
+                <div class="faq-answer">
+                    <p>Sí, ofrecemos servicio de toma de muestras en campo con personal técnico calificado para
+                        garantizar la cadena de custodia y validez de los resultados.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Están acreditados?</button>
+                <div class="faq-answer">
+                    <p>Sí, nuestros equipos son calibrados regularmente y seguimos normativas nacionales e
+                        internacionales (NTP, ASTM, ISO) en todos nuestros ensayos.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Cómo solicito una cotización formal?</button>
+                <div class="faq-answer">
+                    <p>Puede usar nuestro cotizador en línea en esta misma página, escribirnos al WhatsApp o enviarnos
+                        un correo con los detalles de su proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICACIONES -->
+    <section class="certifications-section">
+        <div class="container certifications-container">
+            <img src="imagenes/iso9001.png" alt="Certificación ISO 9001" class="cert-logo"
+                title="ISO 9001:2015 - Gestión de Calidad">
+            <img src="imagenes/iso14001.png" alt="Certificación ISO 14001" class="cert-logo"
+                title="ISO 14001:2015 - Gestión Ambiental">
+        </div>
+    </section>
+
+    <!-- MODAL WHATSAPP -->
+    <div class="modal" id="whatsappModal">
+        <div class="modal-content">
+            <h3>✅ Cotización Descargada</h3>
+            <p>Sigue estos pasos para compartir por WhatsApp:</p>
+            <ol class="modal-steps">
+                <li>El PDF se ha descargado en tu dispositivo</li>
+                <li>WhatsApp Web se abrirá en una nueva pestaña</li>
+                <li>Selecciona el contacto al que deseas enviar la cotización</li>
+                <li>Adjunta el archivo PDF descargado</li>
+                <li>¡Envía tu cotización!</li>
+            </ol>
+            <button class="btn btn-close" onclick="closeModal()">Entendido</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Laboratorio CIPDA</h4>
+                    <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                    <p>Servicios profesionales de análisis y estudios especializados</p>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <p>📧cipdalab@gmail.com</p>
+                    <p>📱 921593127</p>
+                    <p>Lima-Perú</p>
+                </div>
+                <div>
+                    <h4>Servicios</h4>
+                    <p><a href="#servicios">Mecánica de Suelos</a></p>
+                    <p><a href="#servicios">Análisis de Agua</a></p>
+                    <p><a href="#servicios">Calidad del Aire</a></p>
+                </div>
+                <div>
+                    <h4>Horario de Atención</h4>
+                    <p>Lunes a Viernes</p>
+                    <p>8:00 AM - 7:00 PM</p>
+                    <p>Sábados: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio CIPDA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/51921593127" class="whatsapp-float" target="_blank" title="Enviar mensaje por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
