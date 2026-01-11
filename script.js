@@ -1,412 +1,568 @@
-// ========================================
-// LABORATORIO DE MECÁNICA DE SUELOS
-// Sistema de Cotización - JavaScript
-// ========================================
+// ===== VARIABLES GLOBALES =====
+let currentSlide = 0;
+let currentTestimonial = 0;
+let currentStep = 1;
+let autoSlideInterval;
+let autoTestimonialInterval;
 
-// === NAVEGACIÓN MÓVIL ===
-const mobileToggle = document.getElementById('mobileToggle');
-const navMenu = document.getElementById('navMenu');
-
-mobileToggle?.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+// ===== FUNCIONES DE INICIALIZACIÓN =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar todas las funcionalidades
+    initNavigation();
+    initCarousel();
+    // initTestimonials();
+    initQuoteSystem();
+    initFAQ();
+    initScrollEffects();
+    initModal();
+    
+    console.log('Laboratorio CIPDA - Sitio web cargado y listo');
 });
 
-// Cerrar menú al hacer click en un enlace
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+// ===== NAVEGACIÓN RESPONSIVE =====
+function initNavigation() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.querySelector('.nav-right');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    mobileToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Cambiar icono del botón
+        const spans = this.querySelectorAll('span');
+        spans.forEach(span => span.style.transition = 'all 0.3s ease');
     });
-});
-
-// === ANIMACIONES AL SCROLL ===
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-            observer.unobserve(entry.target);
+    
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Header con scroll
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
-}, observerOptions);
-
-document.querySelectorAll('.service-card').forEach((card) => {
-    observer.observe(card);
-});
-
-// === SISTEMA DE COTIZACIÓN ===
-
-// Función para agregar una nueva fila a la tabla
-function addRow() {
-    const tableBody = document.getElementById('quoteTableBody');
-    const newRow = document.createElement('tr');
-
-    newRow.innerHTML = `
-        <td><input type="text" class="item-description" placeholder="Ej: Análisis granulométrico"></td>
-        <td><input type="number" class="item-quantity" value="1" min="1"></td>
-        <td><input type="number" class="item-price" placeholder="0" min="0"></td>
-        <td class="item-subtotal">$0</td>
-        <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
-    `;
-
-    tableBody.appendChild(newRow);
-    attachRowListeners(newRow);
 }
 
-// Función para eliminar una fila
-function removeRow(button) {
-    const row = button.closest('tr');
-    const tableBody = document.getElementById('quoteTableBody');
-
-    // No permitir eliminar si solo queda una fila
-    if (tableBody.children.length > 1) {
-        row.remove();
-        calculateTotals();
-    } else {
-        alert('Debe haber al menos un servicio en la cotización');
+// ===== CARRUSEL HERO =====
+function initCarousel() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-indicators .dot');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+    
+    // Configurar intervalos automáticos
+    autoSlideInterval = setInterval(nextSlide, 5000);
+    
+    // Botones de navegación
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    // Indicadores de puntos
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+    
+    // Pausar carrusel al hacer hover
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+    
+    hero.addEventListener('mouseleave', () => {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+    });
+    
+    // Funciones del carrusel
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+    }
+    
+    function updateCarousel() {
+        // Actualizar slides
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide);
+        });
+        
+        // Actualizar puntos
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
     }
 }
 
-// Función para adjuntar listeners a una fila
-function attachRowListeners(row) {
-    const quantityInput = row.querySelector('.item-quantity');
-    const priceInput = row.querySelector('.item-price');
-
-    quantityInput?.addEventListener('input', () => {
-        updateRowSubtotal(row);
-        calculateTotals();
+// ===== TESTIMONIOS DESLIZANTES (DESACTIVADO) =====
+/*
+function initTestimonials() {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.testimonial-dots .dot');
+    const prevBtn = document.querySelector('.testimonial-prev');
+    const nextBtn = document.querySelector('.testimonial-next');
+    
+    if (testimonials.length === 0) return;
+    
+    // Configurar intervalos automáticos
+    autoTestimonialInterval = setInterval(nextTestimonial, 7000);
+    
+    // Botones de navegación
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevTestimonial);
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextTestimonial);
+    }
+    
+    // Indicadores de puntos
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToTestimonial(index));
     });
-
-    priceInput?.addEventListener('input', () => {
-        updateRowSubtotal(row);
-        calculateTotals();
-    });
-}
-
-// Función para actualizar el subtotal de una fila
-function updateRowSubtotal(row) {
-    const quantity = parseFloat(row.querySelector('.item-quantity')?.value) || 0;
-    const price = parseFloat(row.querySelector('.item-price')?.value) || 0;
-    const subtotal = quantity * price;
-
-    const subtotalCell = row.querySelector('.item-subtotal');
-    if (subtotalCell) {
-        subtotalCell.textContent = formatCurrency(subtotal);
+    
+    // Funciones de testimonios
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        updateTestimonials();
+    }
+    
+    function prevTestimonial() {
+        currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+        updateTestimonials();
+    }
+    
+    function goToTestimonial(index) {
+        currentTestimonial = index;
+        updateTestimonials();
+    }
+    
+    function updateTestimonials() {
+        // Actualizar testimonios
+        testimonials.forEach((testimonial, index) => {
+            testimonial.classList.toggle('active', index === currentTestimonial);
+        });
+        
+        // Actualizar puntos
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentTestimonial);
+        });
     }
 }
+*/
 
-// Función para calcular totales
-function calculateTotals() {
-    const rows = document.querySelectorAll('#quoteTableBody tr');
-    let subtotal = 0;
-
-    rows.forEach(row => {
-        const quantity = parseFloat(row.querySelector('.item-quantity')?.value) || 0;
-        const price = parseFloat(row.querySelector('.item-price')?.value) || 0;
-        subtotal += quantity * price;
+// ===== SISTEMA DE COTIZACIÓN =====
+function initQuoteSystem() {
+    const serviceOptions = document.querySelectorAll('.service-option input[type="checkbox"]');
+    const nextBtn = document.querySelector('.btn-next');
+    const prevBtn = document.querySelector('.btn-outline[onclick="prevStep()"]');
+    
+    // Calcular precios al seleccionar servicios
+    serviceOptions.forEach(option => {
+        option.addEventListener('change', updateQuoteSummary);
     });
-
-    // IGV 18% (Perú)
-    const igv = subtotal * 0.18;
-    const total = subtotal + igv;
-
-    document.getElementById('subtotal').textContent = formatCurrency(subtotal);
-
-    const igvElement = document.getElementById('iva') || document.getElementById('igv');
-    if (igvElement) igvElement.textContent = formatCurrency(igv);
-
-    document.getElementById('total').textContent = formatCurrency(total);
-}
-
-// Función para agregar servicio rápido
-function addQuickService(description, price = 0) {
-    const tableBody = document.getElementById('quoteTableBody');
-    const newRow = document.createElement('tr');
-
-    newRow.innerHTML = `
-        <td><input type="text" class="item-description" value="${description}"></td>
-        <td><input type="number" class="item-quantity" value="1" min="1"></td>
-        <td><input type="number" class="item-price" value="${price}" min="0"></td>
-        <td class="item-subtotal">$0</td>
-        <td><button class="btn-remove" onclick="removeRow(this)">×</button></td>
-    `;
-
-    tableBody.appendChild(newRow);
-    attachRowListeners(newRow);
-
-    // Actualizar subtotales inmediatamente
-    updateRowSubtotal(newRow);
-    calculateTotals();
-
-    // Notificación visual (opcional)
-    const btn = event.target;
-    const originalText = btn.innerText;
-    btn.innerText = '✓ Agregado';
-    setTimeout(() => {
-        btn.innerText = originalText;
-    }, 1000);
-}
-
-// Función para formatear moneda
-function formatCurrency(amount) {
-    return '$' + amount.toLocaleString('es-CL', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-}
-
-// Inicializar listeners en la primera fila
-document.addEventListener('DOMContentLoaded', () => {
-    const firstRow = document.querySelector('#quoteTableBody tr');
-    if (firstRow) {
-        attachRowListeners(firstRow);
+    
+    // Actualizar campo de servicio personalizado
+    const customService = document.getElementById('customService');
+    if (customService) {
+        customService.addEventListener('input', updateQuoteSummary);
     }
-});
+    
+    // Actualizar formulario
+    const formInputs = document.querySelectorAll('#quoteForm input, #quoteForm textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('input', updateQuoteSummary);
+    });
+    
+    // Inicializar resumen
+    updateQuoteSummary();
+}
 
-// === FUNCIÓN PARA GUARDAR DATOS ===
-function saveData() {
-    const data = {
-        cliente: {
-            nombre: document.getElementById('clientName')?.value || '',
-            rut: document.getElementById('clientRUT')?.value || '',
-            email: document.getElementById('clientEmail')?.value || '',
-            telefono: document.getElementById('clientPhone')?.value || '',
-            direccion: document.getElementById('clientAddress')?.value || ''
-        },
-        servicios: [],
-        totales: {
-            subtotal: document.getElementById('subtotal')?.textContent || '$0',
-            igv: (document.getElementById('iva') || document.getElementById('igv'))?.textContent || '$0',
-            total: document.getElementById('total')?.textContent || '$0'
+function nextStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    
+    currentStep++;
+    const nextStepElement = document.getElementById(`step${currentStep}`);
+    nextStepElement.classList.add('active');
+    
+    // Desplazar a la sección de cotización
+    document.getElementById('cotizacion').scrollIntoView({ behavior: 'smooth' });
+}
+
+function prevStep() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    
+    currentStep--;
+    const prevStepElement = document.getElementById(`step${currentStep}`);
+    prevStepElement.classList.add('active');
+}
+
+function updateQuoteSummary() {
+    // Obtener servicios seleccionados
+    const selectedServices = [];
+    document.querySelectorAll('.service-option input[type="checkbox"]:checked').forEach(checkbox => {
+        selectedServices.push(checkbox.value);
+    });
+    
+    // Agregar servicio personalizado si existe
+    const customService = document.getElementById('customService');
+    if (customService && customService.value.trim()) {
+        selectedServices.push(customService.value);
+    }
+    
+    // Calcular precio estimado (esto es un ejemplo, deberías tener precios reales)
+    const basePrice = 150; // Precio base por servicio
+    const estimatedTotal = selectedServices.length * basePrice;
+    const igv = estimatedTotal * 0.18;
+    const total = estimatedTotal + igv;
+    
+    // Actualizar resumen
+    const clientName = document.getElementById('clientName').value || 'No especificado';
+    const clientRUC = document.getElementById('clientRUC').value || 'No especificado';
+    
+    document.getElementById('summaryClient').textContent = clientName;
+    document.getElementById('summaryRUC').textContent = clientRUC;
+    document.getElementById('summaryServices').textContent = selectedServices.length > 0 
+        ? selectedServices.join(', ') 
+        : 'No se seleccionaron servicios';
+    
+    document.getElementById('summaryTotal').textContent = `S/ ${total.toFixed(2)}`;
+}
+
+function generateQuote() {
+    // Validar formulario
+    const requiredFields = ['clientName', 'clientRUC', 'clientEmail', 'clientPhone'];
+    let isValid = true;
+    
+    requiredFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (!field.value.trim()) {
+            field.style.borderColor = 'var(--danger-color)';
+            isValid = false;
+        } else {
+            field.style.borderColor = '';
         }
-    };
+    });
+    
+    if (!isValid) {
+        alert('Por favor, complete todos los campos obligatorios marcados con *');
+        return;
+    }
+    
+    // Ir al paso 3
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    
+    currentStep = 3;
+    const nextStepElement = document.getElementById(`step${currentStep}`);
+    nextStepElement.classList.add('active');
+    
+    // Actualizar resumen final
+    updateQuoteSummary();
+    
+    // Mostrar modal de confirmación
+    showModal();
+}
 
-    // Guardar servicios
-    const rows = document.querySelectorAll('#quoteTableBody tr');
-    rows.forEach(row => {
-        const descripcion = row.querySelector('.item-description')?.value || '';
-        const cantidad = row.querySelector('.item-quantity')?.value || '0';
-        const precio = row.querySelector('.item-price')?.value || '0';
-        const subtotal = row.querySelector('.item-subtotal')?.textContent || '$0';
+function downloadQuote() {
+    // Crear contenido HTML para el PDF
+    const quoteContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; }
+                .header { text-align: center; margin-bottom: 30px; }
+                .logo { font-size: 24px; font-weight: bold; color: #2c3e50; }
+                .title { font-size: 28px; margin: 20px 0; color: #3498db; }
+                .section { margin: 20px 0; }
+                .section-title { background: #f8f9fa; padding: 10px; font-weight: bold; }
+                .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+                .total { font-size: 20px; font-weight: bold; color: #27ae60; text-align: right; }
+                .footer { margin-top: 50px; text-align: center; font-size: 12px; color: #7f8c8d; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="logo">CIPDA LABORATORIO</div>
+                <div class="title">COTIZACIÓN DE SERVICIOS</div>
+                <div>Fecha: ${new Date().toLocaleDateString()}</div>
+                <div>Código: CIPDA-${Date.now().toString().slice(-6)}</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">DATOS DEL CLIENTE</div>
+                <div class="info-grid">
+                    <div><strong>Cliente:</strong> ${document.getElementById('clientName').value}</div>
+                    <div><strong>RUC:</strong> ${document.getElementById('clientRUC').value}</div>
+                    <div><strong>Email:</strong> ${document.getElementById('clientEmail').value}</div>
+                    <div><strong>Teléfono:</strong> ${document.getElementById('clientPhone').value}</div>
+                    <div><strong>Dirección:</strong> ${document.getElementById('clientAddress').value || 'No especificada'}</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">SERVICIOS SOLICITADOS</div>
+                <ul>
+                    ${Array.from(document.querySelectorAll('.service-option input[type="checkbox"]:checked'))
+                        .map(cb => `<li>${cb.value}</li>`).join('')}
+                    ${document.getElementById('customService').value.trim() ? 
+                        `<li>${document.getElementById('customService').value}</li>` : ''}
+                </ul>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">RESUMEN DE COSTOS</div>
+                <div style="text-align: right;">
+                    <div>Subtotal: S/ ${(document.querySelectorAll('.service-option input[type="checkbox"]:checked').length * 150).toFixed(2)}</div>
+                    <div>IGV (18%): S/ ${(document.querySelectorAll('.service-option input[type="checkbox"]:checked').length * 150 * 0.18).toFixed(2)}</div>
+                    <div class="total">TOTAL: S/ ${(document.querySelectorAll('.service-option input[type="checkbox"]:checked').length * 150 * 1.18).toFixed(2)}</div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Laboratorio CIPDA - Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                <p>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash | Tel: +51 921 593 127 | cipdalab@gmail.com</p>
+                <p>Esta cotización es válida por 30 días a partir de la fecha de emisión</p>
+            </div>
+        </body>
+        </html>
+    `;
+    
+    // Crear y descargar PDF
+    const blob = new Blob([quoteContent], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Cotizacion_CIPDA_${Date.now()}.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    console.log('Cotización descargada');
+}
 
-        if (descripcion) {
-            data.servicios.push({
-                descripcion,
-                cantidad,
-                precio,
-                subtotal
+function sendWhatsApp() {
+    const clientName = document.getElementById('clientName').value;
+    const clientPhone = document.getElementById('clientPhone').value;
+    const services = Array.from(document.querySelectorAll('.service-option input[type="checkbox"]:checked'))
+        .map(cb => cb.value);
+    
+    const message = `Hola, soy ${clientName}. Solicito cotización para los siguientes servicios: ${services.join(', ')}. Mi teléfono es ${clientPhone}.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/51921593127?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+
+function newQuote() {
+    // Resetear formulario
+    document.querySelectorAll('.service-option input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.getElementById('customService').value = '';
+    document.querySelectorAll('#quoteForm input, #quoteForm textarea').forEach(input => input.value = '');
+    
+    // Volver al paso 1
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    currentStepElement.classList.remove('active');
+    
+    currentStep = 1;
+    const step1Element = document.getElementById(`step${currentStep}`);
+    step1Element.classList.add('active');
+    
+    updateQuoteSummary();
+}
+
+// ===== FAQ ACORDEÓN =====
+function initFAQ() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            
+            if (this.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = '0';
+            }
+            
+            // Cerrar otras preguntas
+            faqQuestions.forEach(otherQuestion => {
+                if (otherQuestion !== this && otherQuestion.classList.contains('active')) {
+                    otherQuestion.classList.remove('active');
+                    otherQuestion.nextElementSibling.style.maxHeight = '0';
+                }
             });
+        });
+    });
+}
+
+// ===== EFECTOS DE SCROLL =====
+function initScrollEffects() {
+    // Botón de scroll to top
+    const scrollTopBtn = document.getElementById('scrollTop');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
+        } else {
+            scrollTopBtn.classList.remove('visible');
+        }
+        
+        // Animación de elementos al hacer scroll
+        animateOnScroll();
+    });
+    
+    // Scroll suave para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // Botón de scroll to top
+    scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Animación de elementos al cargar
+    animateOnScroll();
+}
+
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.fade-in, .service-card, .gallery-item');
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
         }
     });
-
-    return data;
 }
 
-// === FUNCIÓN PARA IMPRIMIR / GENERAR PDF ===
-function printQuote() {
-    // Validar que haya datos del cliente
-    const clientName = document.getElementById('clientName')?.value;
-    if (!clientName) {
-        alert('Por favor complete al menos el nombre del cliente');
-        return;
+// ===== MODAL =====
+function initModal() {
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalClose = document.getElementById('modalClose');
+    
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
     }
-
-    // Guardar datos antes de imprimir
-    const data = saveData();
-    console.log('Datos guardados:', data);
-
-    // Abrir ventana de impresión
-    window.print();
-}
-
-// === FUNCIÓN PARA COMPARTIR POR WHATSAPP ===
-function shareWhatsApp() {
-    // Validar que haya datos del cliente
-    const clientName = document.getElementById('clientName')?.value;
-    if (!clientName) {
-        alert('Por favor complete al menos el nombre del cliente');
-        return;
+    
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
     }
-
-    // Guardar datos
-    const data = saveData();
-    console.log('Datos para WhatsApp:', data);
-
-    // Generar PDF (usar función de imprimir)
-    window.print();
-
-    // Mostrar modal de instrucciones
-    setTimeout(() => {
-        showModal();
-
-        // Abrir WhatsApp Web después de un breve delay
-        setTimeout(() => {
-            const message = encodeURIComponent(
-                `Hola! Te envío la cotización de servicios del Laboratorio CIPDA para ${data.cliente.nombre}.\n\n` +
-                `Servicios solicitados: ${data.servicios.length}\n` +
-                `Total: ${data.totales.total}\n\n` +
-                `Adjunto encontrarás el PDF con los detalles completos.`
-            );
-
-            window.open(`https://web.whatsapp.com/send?text=${message}`, '_blank');
-        }, 1000);
-    }, 500);
+    
+    // Cerrar con Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
 }
 
-// === MODAL DE WHATSAPP ===
 function showModal() {
-    const modal = document.getElementById('whatsappModal');
-    if (modal) {
-        modal.classList.add('active');
+    const modalOverlay = document.getElementById('modalOverlay');
+    if (modalOverlay) {
+        modalOverlay.classList.add('active');
     }
 }
 
 function closeModal() {
-    const modal = document.getElementById('whatsappModal');
-    if (modal) {
-        modal.classList.remove('active');
+    const modalOverlay = document.getElementById('modalOverlay');
+    if (modalOverlay) {
+        modalOverlay.classList.remove('active');
     }
 }
 
-// Cerrar modal al hacer click fuera del contenido
-document.getElementById('whatsappModal')?.addEventListener('click', (e) => {
-    if (e.target.id === 'whatsappModal') {
-        closeModal();
-    }
-});
+// ===== FUNCIONES GLOBALES =====
+window.currentSlide = function(n) {
+    // Función de compatibilidad para el carrusel original
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-indicators .dot');
+    
+    currentSlide = n - 1;
+    
+    slides.forEach((slide, index) => {
+        slide.classList.toggle('active', index === currentSlide);
+    });
+    
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+};
 
-// === NAVEGACIÓN SUAVE ===
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+window.addQuickService = function(service) {
+    // Función de compatibilidad para agregar servicios rápidamente
+    const serviceOptions = document.querySelectorAll('.service-option input[type="checkbox"]');
+    
+    serviceOptions.forEach(option => {
+        if (option.value === service) {
+            option.checked = true;
+            option.dispatchEvent(new Event('change'));
         }
     });
+    
+    // Ir a la sección de cotización
+    document.getElementById('cotizacion').scrollIntoView({ behavior: 'smooth' });
+};
+
+// ===== MANEJO DE ERRORES =====
+window.addEventListener('error', function(e) {
+    console.error('Error en la página:', e.error);
 });
 
-// === HEADER SCROLL EFFECT ===
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        header?.classList.add('scrolled');
-    } else {
-        header?.classList.remove('scrolled');
-    }
-
-    lastScroll = currentScroll;
+// ===== OFFLINE SUPPORT =====
+window.addEventListener('online', function() {
+    console.log('Conectado a internet');
 });
 
-// === VALIDACIÓN DE FORMULARIO ===
-const form = document.getElementById('quoteForm');
-form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-});
-
-// Validación en tiempo real
-const emailInput = document.getElementById('clientEmail');
-emailInput?.addEventListener('blur', function () {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (this.value && !emailRegex.test(this.value)) {
-        this.style.borderColor = '#EF4444';
-    } else {
-        this.style.borderColor = '#E2E8F0';
-    }
-});
-
-// Formateo automático de RUT (simple)
-const rutInput = document.getElementById('clientRUT');
-rutInput?.addEventListener('input', function () {
-    let value = this.value.replace(/[^0-9kK]/g, '');
-    if (value.length > 1) {
-        value = value.slice(0, -1) + '-' + value.slice(-1);
-    }
-    this.value = value;
-});
-
-// === HERO CAROUSEL ===
-let slideIndex = 1;
-const slides = document.getElementsByClassName("hero-slide");
-
-if (slides.length > 0) {
-    showSlides(slideIndex);
-
-    // Auto play
-    setInterval(() => {
-        plusSlides(1);
-    }, 5000);
-}
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let i;
-    const slides = document.getElementsByClassName("hero-slide");
-    const dots = document.getElementsByClassName("dot");
-
-    if (slides.length === 0) return;
-
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
-    }
-
-    slides[slideIndex - 1].classList.add("active");
-    if (dots.length > 0 && dots.length >= slideIndex) {
-        dots[slideIndex - 1].classList.add("active");
-    }
-}
-
-// === CONSOLA DE DESARROLLO ===
-console.log('%c🧪 Laboratorio CIPDA - Sistema de Cotización',
-    'color: #247BA0; font-size: 14px; font-weight: bold;');
-console.log('%cSistema cargado correctamente',
-    'color: #2A9D8F; font-size: 12px;');
-
-// === PREGUNTAS FRECUENTES (FAQ) ===
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-        const item = question.parentElement;
-        const isActive = item.classList.contains('active');
-
-        // Cerrar todos
-        document.querySelectorAll('.faq-item').forEach(i => {
-            i.classList.remove('active');
-            const answer = i.querySelector('.faq-answer');
-            if (answer) answer.style.maxHeight = null;
-        });
-
-        // Abrir actual si no estaba activo
-        if (!isActive) {
-            item.classList.add('active');
-            const answer = item.querySelector('.faq-answer');
-            if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-    });
+window.addEventListener('offline', function() {
+    console.log('Sin conexión a internet');
 });

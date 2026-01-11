@@ -7,26 +7,42 @@
     <meta name="description"
         content="Servicio de Perforación Diamantina - Recuperación de testigos de roca para estudios geológicos y geotécnicos. Laboratorio CIPDA.">
     <meta name="keywords"
-        content="perforación diamantina, testigos de roca, geología, geotecnia, laboratorio, exploración">
-    <title>Perforación Diamantina | CIPDA Lab</title>
-    <link rel="stylesheet" href="styles.css">
+        content="perforación diamantina, testigos de roca, geología, geotecnia, laboratorio, exploración, sondajes, ensayos geotécnicos">
+    <title>Perforación Diamantina | CIPDA Lab - Expertos en Exploración Geotécnica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="icon" type="image/x-icon" href="imagenes/LOGO.png">
 </head>
 
 <body>
-    <!-- HEADER -->
+    <!-- HEADER MEJORADO -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">
-                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio">
-                <span>CIPDA Lab</span>
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio CIPDA">
+                <div class="logo-text">
+                    <h1>CIPDA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="index.html#cotizacion" class="nav-link">Cotización</a></li>
-                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
+            
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -34,125 +50,180 @@
         </nav>
     </header>
 
-    <!-- PERFORACIÓN DIAMANTINA - PÁGINA DETALLADA -->
-    <section class="section service-detail">
-        <div class="container">
-            <!-- Breadcrumb -->
-            <nav class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="separator">/</span>
-                <a href="index.html#servicios">Mecánica de Suelos</a>
-                <span class="separator">/</span>
+    <!-- HERO SECTION ESPECÍFICO PARA PERFORACIÓN DIAMANTINA -->
+    <section class="service-hero">
+        <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagenes/diamantina4.jpeg');"></div>
+        
+        <div class="container hero-content">
+            <!-- Breadcrumb mejorado -->
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
                 <span class="current">Perforación Diamantina</span>
             </nav>
-
-            <div class="service-detail-content">
-                <div class="service-detail-header">
-                    <h2>Perforación Diamantina</h2>
-                    <p class="subtitle">Exploración geotécnica profunda con recuperación de testigos de roca</p>
+            
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-hard-hat"></i> Servicio Especializado
                 </div>
+                <h1 class="hero-title">Perforación <span class="highlight">Diamantina</span></h1>
+                <p class="hero-subtitle">Exploración geotécnica profunda con recuperación de testigos de roca para estudios detallados del subsuelo</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">600m+</span>
+                        <span class="stat-label">Profundidad máxima</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Recuperación promedio</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Disponibilidad</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Proyectos realizados</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-comment"></i> Solicitar Información
+                    </a>
+                    <a href="#beneficios" class="btn btn-outline">
+                        <i class="fas fa-play-circle"></i> Ver Ventajas
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
-                <div class="service-detail-grid">
-                    <div class="detail-main">
-                        <h3>¿Qué es la Perforación Diamantina?</h3>
-                        <p>La perforación diamantina es un método de exploración directa que utiliza una broca
-                            impregnada de diamantes para cortar la roca y recuperar muestras cilíndricas intactas
-                            (testigos). Este método es esencial para obtener información detallada sobre la
-                            estratigrafía, estructuras geológicas y propiedades mecánicas del subsuelo a profundidades
-                            considerables.</p>
-
-                        <img src="imagenes/diamantina4.jpeg" alt="Perforación Diamantina"
-                            style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0; box-shadow: var(--shadow-md);">
-
-                        <h3>Aplicaciones Principales</h3>
-                        <ul class="check-list">
-                            <li>Exploración minera en superficie y interior mina</li>
-                            <li>Estudios geotécnicos para túneles y presas</li>
-                            <li>Investigación para cimentaciones de grandes estructuras</li>
-                            <li>Definición de yacimientos minerales</li>
-                            <li>Instalación de instrumentos geotécnicos (inclinómetros, piezómetros)</li>
-                            <li>Muestreo de suelos y rocas inalteradas</li>
-                        </ul>
-
-                        <h3>Nuestra Tecnología</h3>
-                        <div class="methodology-steps">
-                            <div class="method-step">
-                                <span class="step-number">1</span>
+    <!-- SECCIÓN DE INTRODUCCIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué es la Perforación Diamantina?</h2>
+                <p>Método de exploración directa que utiliza una broca impregnada de diamantes para cortar la roca y recuperar muestras cilíndricas intactas (testigos)</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-main">
+                    <div class="info-card">
+                        <p>Este método es esencial para obtener información detallada sobre la estratigrafía, estructuras geológicas y propiedades mecánicas del subsuelo a profundidades considerables. Permite una evaluación precisa de las condiciones del terreno para proyectos de ingeniería civil y minería.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <h4>Equipos de Alta Potencia</h4>
-                                    <p>Máquinas capaces de alcanzar profundidades superiores a 500m</p>
+                                    <h4>Muestras de alta calidad</h4>
+                                    <p>Recuperación de testigos continuos y representativos de la formación rocosa</p>
                                 </div>
                             </div>
-                            <div class="method-step">
-                                <span class="step-number">2</span>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <h4>Sistema Wireline</h4>
-                                    <p>Recuperación eficiente de testigos sin extraer la tubería</p>
+                                    <h4>Información detallada</h4>
+                                    <p>Datos precisos sobre litología, fracturas, RQD (Rock Quality Designation) y estructuras geológicas</p>
                                 </div>
                             </div>
-                            <div class="method-step">
-                                <span class="step-number">3</span>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
                                 <div>
-                                    <h4>Orientación de Testigos</h4>
-                                    <p>Herramientas para conocer la posición real de las estructuras geológicas</p>
+                                    <h4>Profundidad y precisión</h4>
+                                    <p>Capacidad para alcanzar grandes profundidades con alta precisión en la orientación</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <h3>Ventajas del Servicio</h3>
-                        <div class="advantages-grid">
-                            <div class="advantage-card">
-                                <span class="advantage-icon">📏</span>
-                                <h4>Precisión</h4>
-                                <p>Muestras continuas y de alta calidad para análisis geológico</p>
-                            </div>
-                            <div class="advantage-card">
-                                <span class="advantage-icon">🔍</span>
-                                <h4>Información</h4>
-                                <p>Datos detallados de litología, fracturamiento y RQD</p>
-                            </div>
-                            <div class="advantage-card">
-                                <span class="advantage-icon">🌍</span>
-                                <h4>Alcance</h4>
-                                <p>Capacidad para perforar en diversos ángulos y terrenos difíciles</p>
-                            </div>
-                        </div>
-
-                        <div class="service-cta-block">
-                            <h3>¿Listo para iniciar su proyecto?</h3>
-                            <p>Solicite una cotización hoy mismo y reciba una respuesta detallada.</p>
-                            <a href="index.html#cotizacion" class="btn btn-primary">Solicitar Cotización</a>
                         </div>
                     </div>
-
-                    <div class="detail-sidebar">
-                        <div class="info-box">
-                            <h4>Especificaciones Técnicas</h4>
-                            <div class="info-item">
-                                <strong>Diámetros:</strong>
-                                <span>BQ, NQ, HQ, PQ</span>
+                    
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img src="imagenes/diamantina4.jpeg" alt="Equipo de perforación diamantina" loading="lazy">
+                            <div class="image-caption">Perforación diamantina en proyecto minero</div>
+                        </div>
+                        <div class="thumbnails">
+                            <div class="thumb">
+                                <img src="imagenes/perforacioneje3.jpeg" alt="Testigos de roca" loading="lazy">
                             </div>
-                            <div class="info-item">
-                                <strong>Profundidad:</strong>
-                                <span>Hasta 600m+</span>
+                            <div class="thumb">
+                                <img src="imagenes/densidad_4.jpeg" alt="Equipo de perforación" loading="lazy">
                             </div>
-                            <div class="info-item">
-                                <strong>Recuperación:</strong>
-                                <span>> 95% en roca competente</span>
-                            </div>
-                            <div class="info-item">
-                                <strong>Normativas:</strong>
-                                <span>ASTM D2113</span>
+                            <div class="thumb">
+                                <img src="imagenes/refraccion_sismica.jpeg" alt="Operación de campo" loading="lazy">
                             </div>
                         </div>
-
-                        <div class="cta-box">
-                            <h4>¿Necesita este servicio?</h4>
-                            <p>Cotice su campaña de perforación con expertos</p>
-                            <a href="index.html#cotizacion" class="btn btn-primary"
-                                style="width: 100%; margin-top: 1rem;">Solicitar Cotización</a>
-                            <a href="index.html#servicios" class="btn btn-outline"
-                                style="width: 100%; margin-top: 0.5rem;">← Volver a Servicios</a>
+                    </div>
+                </div>
+                
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clipboard-list"></i> Especificaciones Técnicas</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <div>
+                                    <span class="spec-label">Diámetros disponibles</span>
+                                    <span class="spec-value">BQ (60mm), NQ (75mm), HQ (96mm), PQ (122mm)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-mountain"></i>
+                                <div>
+                                    <span class="spec-label">Profundidad máxima</span>
+                                    <span class="spec-value">Hasta 600 metros (dependiendo del terreno)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-percentage"></i>
+                                <div>
+                                    <span class="spec-label">Recuperación</span>
+                                    <span class="spec-value">> 95% en roca competente</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Normativas</span>
+                                    <span class="spec-value">ASTM D2113, ISO 22475-1</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <span class="spec-label">Velocidad de perforación</span>
+                                    <span class="spec-value">1-5 m/hora (dependiendo de la dureza)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clock"></i> Tiempos de Ejecución</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-time">1-2 días</span>
+                                <span class="timeline-text">Mobilización del equipo</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">3-10 días</span>
+                                <span class="timeline-text">Perforación (dependiendo de profundidad)</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">2-5 días</span>
+                                <span class="timeline-text">Análisis de testigos en laboratorio</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">3-7 días</span>
+                                <span class="timeline-text">Elaboración de informe técnico</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -160,41 +231,521 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- SECCIÓN DE APLICACIONES -->
+    <section class="section applications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aplicaciones Principales</h2>
+                <p>Nuestro servicio de perforación diamantina es fundamental para diversos proyectos de ingeniería y exploración</p>
+            </div>
+            
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Exploración Minera</h3>
+                    <p>Determinación de reservas minerales, definición de yacimientos y estudios de factibilidad en superficie y interior mina</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Muestreo para análisis geoquímico</li>
+                        <li><i class="fas fa-check"></i> Definición de leyes minerales</li>
+                        <li><i class="fas fa-check"></i> Caracterización de yacimientos</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Ingeniería Civil</h3>
+                    <p>Estudios geotécnicos para grandes obras de infraestructura como túneles, presas, puentes y edificaciones</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Cimentaciones profundas</li>
+                        <li><i class="fas fa-check"></i> Estudios para túneles</li>
+                        <li><i class="fas fa-check"></i> Análisis de estabilidad de taludes</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Estudios Hidrogeológicos</h3>
+                    <p>Investigación de acuíferos, instalación de piezómetros y estudios de permeabilidad del subsuelo</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Instalación de piezómetros</li>
+                        <li><i class="fas fa-check"></i> Ensayos de permeabilidad Lugeon</li>
+                        <li><i class="fas fa-check"></i> Monitoreo de niveles freáticos</li>
+                    </ul>
+                </div>
+                
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Proyectos Industriales</h3>
+                    <p>Investigación para cimentaciones de grandes estructuras, plantas industriales y obras de infraestructura energética</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Cimentaciones para equipos pesados</li>
+                        <li><i class="fas fa-check"></i> Estudios para ductos y tuberías</li>
+                        <li><i class="fas fa-check"></i> Análisis para instalaciones especiales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE BENEFICIOS -->
+    <section class="section benefits-section" id="beneficios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ventajas de la Perforación Diamantina</h2>
+                <p>Descubra por qué nuestro servicio es la opción preferida para proyectos que requieren máxima precisión</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Alta Precisión</h3>
+                    <p>Recuperación de muestras continuas y de alta calidad para análisis geológico y geotécnico detallado</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Información Detallada</h4>
+                    <p>Obtención de datos precisos sobre litología, fracturamiento, RQD y propiedades mecánicas de la roca</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3>Gran Alcance</h3>
+                    <p>Capacidad para perforar en diversos ángulos y terrenos difíciles, alcanzando grandes profundidades</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Equipos Modernos</h3>
+                    <p>Utilizamos tecnología de punta con sistemas wireline para una recuperación eficiente de testigos</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Calificado</h3>
+                    <p>Equipo de perforadores y geólogos con amplia experiencia en proyectos de diversa complejidad</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Certificación y Normas</h3>
+                    <p>Cumplimiento de normativas internacionales (ASTM, ISO) y estándares de calidad estrictos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PROCESO DE TRABAJO -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestro Proceso de Trabajo</h2>
+                <p>Metodología sistemática para garantizar resultados precisos y confiables en cada proyecto</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Evaluación Inicial</h3>
+                        <p>Análisis de objetivos, revisión de información geológica disponible y planificación del programa de perforación</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-clock"></i> 1-2 días</span>
+                            <span><i class="fas fa-clipboard"></i> Propuesta técnica</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Preparación y Movilización</h3>
+                        <p>Preparación de equipos, logística y traslado al sitio de trabajo con todos los permisos necesarios</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-clock"></i> 2-3 días</span>
+                            <span><i class="fas fa-truck"></i> Logística completa</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Ejecución de Perforación</h3>
+                        <p>Perforación con sistema diamantino, recuperación de testigos, registro litológico y toma de muestras</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-clock"></i> Variable (según profundidad)</span>
+                            <span><i class="fas fa-hard-hat"></i> Operación continua</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Análisis de Laboratorio</h3>
+                        <p>Evaluación de testigos, determinación de RQD, ensayos de propiedades físicas y mecánicas de la roca</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-clock"></i> 3-7 días</span>
+                            <span><i class="fas fa-flask"></i> Ensayos especializados</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Informe Final</h3>
+                        <p>Elaboración de informe técnico completo con resultados, interpretación y recomendaciones para el proyecto</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-clock"></i> 5-10 días</span>
+                            <span><i class="fas fa-file-pdf"></i> Documentación completa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE EQUIPOS -->
+    <section class="section equipment-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Tecnología y Equipos</h2>
+                <p>Contamos con equipos de última generación para garantizar la máxima eficiencia y precisión en cada perforación</p>
+            </div>
+            
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="imagenes/perforacioneje3.jpeg" alt="Equipo de perforación diamantina" loading="lazy">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Perforadoras Diamantinas</h3>
+                        <p>Máquinas de alta potencia capaces de alcanzar profundidades superiores a 500m, con sistema wireline para recuperación eficiente de testigos</p>
+                        <div class="equipment-specs">
+                            <span><i class="fas fa-weight-hanging"></i> Hasta 600m de profundidad</span>
+                            <span><i class="fas fa-compress-arrows-alt"></i> Sistema wireline</span>
+                            <span><i class="fas fa-tachometer-alt"></i> Control de torque y presión</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="imagenes/densidad_4.jpeg" alt="Equipo de orientación" loading="lazy">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Sistema de Orientación</h3>
+                        <p>Herramientas especializadas para conocer la posición real de las estructuras geológicas en el subsuelo</p>
+                        <div class="equipment-specs">
+                            <span><i class="fas fa-compass"></i> Orientación precisa</span>
+                            <span><i class="fas fa-layer-group"></i> Mapeo 3D de estructuras</span>
+                            <span><i class="fas fa-ruler"></i> Mediciones exactas de inclinación</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-image">
+                        <img src="imagenes/cajaconmuestras1.jpeg" alt="Equipo de muestreo" loading="lazy">
+                    </div>
+                    <div class="equipment-content">
+                        <h3>Sistemas de Muestreo</h3>
+                        <p>Equipos para la extracción, preservación y transporte de testigos, garantizando la integridad de las muestras</p>
+                        <div class="equipment-specs">
+                            <span><i class="fas fa-box"></i> Cajas de almacenamiento especializadas</span>
+                            <span><i class="fas fa-tags"></i> Sistema de identificación</span>
+                            <span><i class="fas fa-prescription-bottle"></i> Preservación de muestras</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE COTIZACIÓN -->
+    <section class="section cta-section" id="contact-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>¿Listo para iniciar su proyecto de perforación?</h2>
+                    <p>Solicite una cotización personalizada hoy mismo. Nuestro equipo de expertos le brindará asesoría técnica y un presupuesto detallado sin compromiso.</p>
+                    
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Respuesta en 24 horas</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Asesoría técnica gratuita</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cotización personalizada</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="index.html#cotizacion" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+51921593127" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="cta-image">
+                    <img src="imagenes/refraccion_sismica.jpeg" alt="Equipo de perforación en acción" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ESPECÍFICO -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes sobre Perforación Diamantina</h2>
+                <p>Resolvemos las dudas más comunes sobre nuestro servicio de perforación</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuál es el costo promedio de una perforación diamantina?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El costo varía según la profundidad, diámetro, tipo de terreno, ubicación y servicios adicionales requeridos. En promedio, el costo por metro perforado oscila entre S/ 300 y S/ 800, dependiendo de la complejidad. Ofrecemos cotizaciones personalizadas después de evaluar los requerimientos específicos de su proyecto.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué información obtengo con la perforación diamantina?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Obtendrá: 1) Testigos de roca para análisis visual y de laboratorio, 2) Registro litológico detallado, 3) Determinación del RQD (Rock Quality Designation), 4) Identificación de estructuras geológicas, 5) Datos de fracturación, 6) Información para ensayos de laboratorio (resistencia, permeabilidad, etc.), 7) Perfil geotécnico del subsuelo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué diferencia hay entre perforación diamantina y perforación rotativa?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La perforación diamantina utiliza una corona con diamantes industriales que corta la roca, recuperando testigos cilíndricos continuos. La perforación rotativa tritura la roca con una mecha tricónica, produciendo ripios (cuttings) pero no testigos continuos. La diamantina es ideal cuando se necesita información detallada del subsuelo, mientras que la rotativa es más rápida y económica para reconocimiento general.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto tiempo toma una campaña de perforación?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El tiempo varía según: 1) Número de perforaciones, 2) Profundidad de cada una, 3) Tipo de terreno, 4) Accesibilidad al sitio. En promedio, una perforación de 100m puede tomar 2-3 días de trabajo efectivo. A esto debe sumarse el tiempo de movilización, preparación y desmovilización del equipo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Trabajan en terrenos de difícil acceso?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, contamos con equipos portátiles y modulares que pueden ser transportados a terrenos de difícil acceso mediante helicóptero, animales de carga o personal. Hemos trabajado en zonas montañosas, selváticas y desérticas en todo el Perú, adaptándonos a las condiciones logísticas específicas de cada proyecto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MEJORADO -->
     <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
-                <div>
-                    <h4>Laboratorio CIPDA</h4>
-                    <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
-                    <p>Servicios profesionales de análisis y estudios especializados</p>
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo CIPDA">
+                        <div class="logo-text">
+                            <h3>CIPDA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Especialistas en perforación diamantina y exploración geotécnica con más de 10 años de experiencia en proyectos de ingeniería y minería.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <div>
-                    <h4>Contacto</h4>
-                    <p>📧cipdalab@gmail.com</p>
-                    <p>📱 921593127</p>
-                    <p>Huaraz-Perú</p>
+                
+                <div class="footer-col">
+                    <h4>Servicios Relacionados</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="refraccion-sismica.html">Refracción Sísmica</a></li>
+                        <li><a href="articulo-suelos.html">Análisis Geotécnicos</a></li>
+                        <li><a href="batimetria.html">Batimetría</a></li>
+                        <li><a href="index.html#servicios">Análisis de Agua</a></li>
+                        <li><a href="index.html#servicios">Calidad del Aire</a></li>
+                    </ul>
                 </div>
-                <div>
-                    <h4>Servicios</h4>
-                    <p><a href="index.html#servicios">Mecánica de Suelos</a></p>
-                    <p><a href="index.html#servicios">Análisis de Agua</a></p>
-                    <p><a href="index.html#servicios">Calidad del Aire</a></p>
+                
+                <div class="footer-col">
+                    <h4>Contacto Rápido</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+51921593127">+51 921 593 127</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:cipdalab@gmail.com">cipdalab@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-tie"></i>
+                            <span>Ing. Jorge Llanos - Gerente de Perforaciones</span>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <h4>Horario de Atención</h4>
-                    <p>Lunes a Viernes</p>
-                    <p>8:30 AM - 6:00 PM</p>
-                    <p>Sábados: Solo con cita previa</p>
+                
+                <div class="footer-col">
+                    <h4>Solicitar Información</h4>
+                    <p>Complete el formulario para recibir una cotización detallada</p>
+                    <a href="index.html#cotizacion" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        <i class="fas fa-file-alt"></i> Formulario de Cotización
+                    </a>
+                    <div class="emergency-contact">
+                        <p><strong><i class="fas fa-exclamation-circle"></i> Emergencias 24/7:</strong></p>
+                        <a href="tel:+51921593127" class="emergency-phone">
+                            <i class="fas fa-phone"></i> +51 921 593 127
+                        </a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Laboratorio CIPDA. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="index.html">Volver al Inicio</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Perforación%20Diamantina" 
+           class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp sobre Perforación Diamantina">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Consulta sobre Perforación</span>
+        </a>
+        <a href="tel:+51921593127" class="phone-float" aria-label="Llamar por teléfono">
+            <i class="fas fa-phone"></i>
+            <span class="tooltip">Llámanos</span>
+        </a>
+        <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+            <span class="tooltip">Volver arriba</span>
+        </button>
+    </div>
+
+    <script src="script.js?v=2"></script>
+    
+    <script>
+        // JavaScript específico para la página de Perforación Diamantina
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar funcionalidades específicas de esta página
+            
+            // Galería de imágenes
+            const mainImage = document.querySelector('.main-image img');
+            const thumbnails = document.querySelectorAll('.thumb img');
+            
+            thumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    mainImage.src = this.src;
+                    
+                    // Actualizar clase activa
+                    thumbnails.forEach(t => t.parentElement.classList.remove('active'));
+                    this.parentElement.classList.add('active');
+                });
+            });
+            
+            // FAQ específico
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const answer = this.nextElementSibling;
+                    
+                    if (this.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = '0';
+                    }
+                    
+                    // Cerrar otras preguntas
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this && otherQuestion.classList.contains('active')) {
+                            otherQuestion.classList.remove('active');
+                            otherQuestion.nextElementSibling.style.maxHeight = '0';
+                        }
+                    });
+                });
+            });
+            
+            // Animación de estadísticas
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalValue = parseInt(stat.textContent);
+                let currentValue = 0;
+                const increment = finalValue / 50;
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= finalValue) {
+                        currentValue = finalValue;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(currentValue) + (stat.textContent.includes('+') ? '+' : '');
+                }, 30);
+            });
+        });
+    </script>
 </body>
 
 </html>

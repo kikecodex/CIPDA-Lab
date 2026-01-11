@@ -7,26 +7,43 @@
     <meta name="description"
         content="Estudios de Batimetría - Levantamiento de fondos acuáticos y cuerpos de agua. Laboratorio CIPDA.">
     <meta name="keywords"
-        content="batimetría, levantamiento batimétrico, fondos acuáticos, topografía submarina, laboratorio">
-    <title>Batimetría | Laboratorio CIPDA</title>
-    <link rel="stylesheet" href="styles.css">
+        content="batimetría, levantamiento batimétrico, fondos acuáticos, topografía submarina, laboratorio, ecosonda, sonar, mapeo submarino">
+    <meta name="author" content="Laboratorio CIPDA">
+    <title>Batimetría | CIPDA Lab - Expertos en Topografía Submarina</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="icon" type="image/x-icon" href="imagenes/LOGO.png">
 </head>
 
 <body>
-    <!-- HEADER -->
+    <!-- HEADER MEJORADO -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">
-                <img src="imagenes/LOGO.png" alt="Logo Laboratorio">
-                <span>Lab CIPDA</span>
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio CIPDA">
+                <div class="logo-text">
+                    <h1>CIPDA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="index.html#cotizacion" class="nav-link">Cotización</a></li>
-                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
+            
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i> Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -34,177 +51,865 @@
         </nav>
     </header>
 
-    <!-- BATIMETRÍA - PÁGINA DETALLADA -->
-    <section class="section service-detail">
-        <div class="container">
-            <!-- Breadcrumb -->
-            <nav class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="separator">/</span>
-                <a href="index.html#servicios">Mecánica de Suelos</a>
-                <span class="separator">/</span>
+    <!-- HERO SECTION ESPECÍFICO PARA BATIMETRÍA -->
+    <section class="service-hero bathymetry-hero">
+        <div class="hero-background" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagenes/perforacion_rio_puente_clarita.png');"></div>
+        
+        <div class="water-effect">
+            <div class="water-wave"></div>
+            <div class="water-wave"></div>
+            <div class="water-wave"></div>
+        </div>
+        
+        <div class="container hero-content">
+            <!-- Breadcrumb mejorado -->
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
                 <span class="current">Batimetría</span>
             </nav>
-
-            <div class="service-detail-content">
-                <div class="service-detail-header">
-                    <h2>Estudios de Batimetría</h2>
-                    <p class="subtitle">Levantamiento y mapeo de fondos acuáticos y cuerpos de agua</p>
+            
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-water"></i> Topografía Submarina Especializada
                 </div>
+                <h1 class="hero-title">Batimetría y <span class="highlight">Cartografía Submarina</span></h1>
+                <p class="hero-subtitle">Levantamiento y mapeo preciso de fondos acuáticos para proyectos de ingeniería, navegación y estudios ambientales</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">0-100m</span>
+                        <span class="stat-label">Profundidad de trabajo</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">±5cm</span>
+                        <span class="stat-label">Precisión vertical</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Monitoreo continuo</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">Proyectos realizados</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-ship"></i> Solicitar Estudio
+                    </a>
+                    <a href="#aplicaciones" class="btn btn-outline">
+                        <i class="fas fa-compass"></i> Ver Aplicaciones
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        
+        <div class="depth-indicator">
+            <div class="depth-line"></div>
+            <div class="depth-markers">
+                <span>0m</span>
+                <span>25m</span>
+                <span>50m</span>
+                <span>75m</span>
+                <span>100m</span>
+            </div>
+        </div>
+    </section>
 
-                <div class="service-detail-grid">
-                    <div class="detail-main">
-                        <h3>¿Qué es la Batimetría?</h3>
-                        <p>La batimetría es la ciencia que estudia y mide las profundidades de los cuerpos de agua, como
-                            océanos, mares, lagos, ríos y embalses. Mediante levantamientos batimétricos se obtienen
-                            mapas topográficos submarinos esenciales para la planificación de obras hidráulicas,
-                            navegación y estudios ambientales.</p>
-
-                        <h3>Aplicaciones</h3>
-                        <ul class="check-list">
-                            <li>Diseño y construcción de puertos y muelles</li>
-                            <li>Dragado y mantenimiento de canales de navegación</li>
-                            <li>Planificación de embalses y represas</li>
-                            <li>Estudios de volumen de sedimentos</li>
-                            <li>Modelación hidráulica y de flujos</li>
-                            <li>Instalación de tuberías y cables submarinos</li>
-                            <li>Monitoreo de erosión y deposición</li>
-                            <li>Estudios ambientales acuáticos</li>
-                        </ul>
-
-                        <h3>Metodología</h3>
-                        <div class="methodology-steps">
-                            <div class="method-step">
-                                <span class="step-number">1</span>
-                                <div>
-                                    <h4>Planificación del Levantamiento</h4>
-                                    <p>Diseño de transectas y definición del área de estudio</p>
-                                </div>
-                            </div>
-                            <div class="method-step">
-                                <span class="step-number">2</span>
-                                <div>
-                                    <h4>Adquisición de Datos</h4>
-                                    <p>Mediciones con ecosonda y posicionamiento GPS/GNSS</p>
-                                </div>
-                            </div>
-                            <div class="method-step">
-                                <span class="step-number">3</span>
-                                <div>
-                                    <h4>Procesamiento de Datos</h4>
-                                    <p>Corrección de mareas y generación de modelo digital del terreno</p>
-                                </div>
-                            </div>
-                            <div class="method-step">
-                                <span class="step-number">4</span>
-                                <div>
-                                    <h4>Entrega de Productos</h4>
-                                    <p>Mapas batimétricos, curvas de nivel y cálculos de volumen</p>
-                                </div>
-                            </div>
+    <!-- SECCIÓN DE INTRODUCCIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué es la Batimetría?</h2>
+                <p>La ciencia que estudia y mide las profundidades de los cuerpos de agua para obtener mapas topográficos submarinos</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-main">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-water"></i>
+                            <h3>Tecnología de Punta en Cartografía Submarina</h3>
                         </div>
-
-                        <h3>Ventajas del Servicio</h3>
-                        <div class="advantages-grid">
-                            <div class="advantage-card">
-                                <span class="advantage-icon">📏</span>
-                                <h4>Precisión</h4>
-                                <p>Mediciones exactas con tecnología de última generación</p>
+                        <p>La batimetría es fundamental para la planificación de obras hidráulicas, navegación segura y estudios ambientales. Mediante levantamientos batimétricos obtenemos representaciones precisas del fondo acuático, esenciales para proyectos de ingeniería civil, minería y gestión de recursos hídricos.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="fas fa-bullseye"></i>
+                                <div>
+                                    <h4>Alta precisión</h4>
+                                    <p>Mediciones exactas con ecosondas multihaz y tecnología GNSS RTK</p>
+                                </div>
                             </div>
-                            <div class="advantage-card">
-                                <span class="advantage-icon">🗺️</span>
-                                <h4>Mapas Detallados</h4>
-                                <p>Representaciones 3D y curvas de nivel de alta resolución</p>
+                            <div class="feature">
+                                <i class="fas fa-map"></i>
+                                <div>
+                                    <h4>Cartografía detallada</h4>
+                                    <p>Generación de mapas 3D y modelos digitales del terreno submarino</p>
+                                </div>
                             </div>
-                            <div class="advantage-card">
-                                <span class="advantage-icon">💧</span>
-                                <h4>Cualquier Profundidad</h4>
-                                <p>Desde aguas someras hasta grandes profundidades</p>
+                            <div class="feature">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <h4>Rápida cobertura</h4>
+                                    <p>Levantamientos eficientes que cubren grandes áreas en poco tiempo</p>
+                                </div>
                             </div>
-                            <div class="advantage-card">
-                                <span class="advantage-icon">⚙️</span>
-                                <h4>Tecnología Avanzada</h4>
-                                <p>Equipos de ecosonda y GPS de alta precisión</p>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Seguridad operacional</h4>
+                                    <p>Identificación de obstáculos y peligros submarinos para navegación</p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="service-cta-block">
-                            <h3>¿Listo para iniciar su proyecto?</h3>
-                            <p>Solicite una cotización hoy mismo y reciba una respuesta detallada.</p>
-                            <a href="index.html#cotizacion" class="btn btn-primary">Solicitar Cotización</a>
                         </div>
                     </div>
-
-                    <div class="detail-sidebar">
-                        <div class="info-box">
-                            <h4>Información del Servicio</h4>
-                            <div class="info-item">
-                                <strong>Duración:</strong>
-                                <span>Variable según área</span>
+                    
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img src="imagenes/perforacion_rio_puente_clarita.png" alt="Levantamiento batimétrico en río" loading="lazy">
+                            <div class="image-caption">Levantamiento batimétrico para estudio de puente en río</div>
+                        </div>
+                        <div class="thumbnails">
+                            <div class="thumb">
+                                <img src="imagenes/topo.jpg" alt="Equipo de ecosonda multihaz" loading="lazy">
                             </div>
-                            <div class="info-item">
-                                <strong>Entrega:</strong>
-                                <span>10-15 días hábiles</span>
+                            <div class="thumb">
+                                <img src="imagenes/perforacioneje3.jpeg" alt="Procesamiento de datos batimétricos" loading="lazy">
                             </div>
-                            <div class="info-item">
-                                <strong>Profundidad:</strong>
-                                <span>Sin límite específico</span>
-                            </div>
-                            <div class="info-item">
-                                <strong>Equipos:</strong>
-                                <span>Ecosonda + GPS/GNSS</span>
+                            <div class="thumb">
+                                <img src="imagenes/densidad_4.jpeg" alt="Mapa batimétrico 3D" loading="lazy">
                             </div>
                         </div>
-
-                        <div class="cta-box">
-                            <h4>¿Interesado en este servicio?</h4>
-                            <p>Solicite una cotización personalizada para su proyecto</p>
-                            <a href="index.html#cotizacion" class="btn btn-primary"
-                                style="width: 100%; margin-top: 1rem;">Solicitar Cotización</a>
-                            <a href="index.html#servicios" class="btn btn-outline"
-                                style="width: 100%; margin-top: 0.5rem;">← Volver a Servicios</a>
+                    </div>
+                    
+                    <div class="bathymetry-types">
+                        <h3><i class="fas fa-waves"></i> Tipos de Batimetría</h3>
+                        <div class="types-grid">
+                            <div class="type-card">
+                                <div class="type-icon">
+                                    <i class="fas fa-ship"></i>
+                                </div>
+                                <h4>Batimetría Náutica</h4>
+                                <p>Para cartas náuticas, seguridad de navegación y mantenimiento de canales</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Determinación de profundidades</li>
+                                    <li><i class="fas fa-check"></i> Identificación de obstáculos</li>
+                                    <li><i class="fas fa-check"></i> Actualización de cartas náuticas</li>
+                                </ul>
+                            </div>
+                            <div class="type-card">
+                                <div class="type-icon">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <h4>Batimetría de Ingeniería</h4>
+                                <p>Para proyectos de infraestructura como puentes, muelles y tuberías submarinas</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Estudios para cimentaciones</li>
+                                    <li><i class="fas fa-check"></i> Volumen de dragado</li>
+                                    <li><i class="fas fa-check"></i> Instalación de infraestructura</li>
+                                </ul>
+                            </div>
+                            <div class="type-card">
+                                <div class="type-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4>Batimetría Ambiental</h4>
+                                <p>Para estudios de sedimentación, erosión y monitoreo ambiental</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Monitoreo de sedimentos</li>
+                                    <li><i class="fas fa-check"></i> Estudios de erosión costera</li>
+                                    <li><i class="fas fa-check"></i> Evaluación de hábitats acuáticos</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-tachometer-alt"></i> Especificaciones Técnicas</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-vertical"></i>
+                                <div>
+                                    <span class="spec-label">Precisión vertical</span>
+                                    <span class="spec-value">±5 cm (con GNSS RTK)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-ruler-horizontal"></i>
+                                <div>
+                                    <span class="spec-label">Precisión horizontal</span>
+                                    <span class="spec-value">±2 cm (con GNSS RTK)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-water"></i>
+                                <div>
+                                    <span class="spec-label">Profundidad máxima</span>
+                                    <span class="spec-value">Hasta 100 metros (equipo estándar)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-satellite"></i>
+                                <div>
+                                    <span class="spec-label">Sistema de posicionamiento</span>
+                                    <span class="spec-value">GNSS RTK (GPS, GLONASS, Galileo)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-wave-square"></i>
+                                <div>
+                                    <span class="spec-label">Equipo de sondeo</span>
+                                    <span class="spec-value">Ecosonda monohaz y multihaz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Cronograma Típico</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-time">1-2 días</span>
+                                <span class="timeline-text">Planificación y movilización</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">Variable</span>
+                                <span class="timeline-text">Levantamiento en campo (depende del área)</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">3-5 días</span>
+                                <span class="timeline-text">Procesamiento de datos</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">5-7 días</span>
+                                <span class="timeline-text">Informe final y productos cartográficos</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-file-export"></i> Productos Entregables</h3>
+                        <ul class="documents-list">
+                            <li><i class="fas fa-file-alt"></i> Informe técnico completo</li>
+                            <li><i class="fas fa-map"></i> Mapas batimétricos 2D/3D</li>
+                            <li><i class="fas fa-chart-line"></i> Perfiles transversales y longitudinales</li>
+                            <li><i class="fas fa-cube"></i> Modelo digital del terreno (MDT)</li>
+                            <li><i class="fas fa-calculator"></i> Cálculos de volúmenes</li>
+                            <li><i class="fas fa-database"></i> Datos brutos y procesados</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer" id="contacto">
+    <!-- SECCIÓN DE APLICACIONES -->
+    <section class="section applications-section" id="aplicaciones">
         <div class="container">
-            <div class="footer-content">
-                <div>
-                    <h4>Laboratorio CIPDA</h4>
-                    <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
-                    <p>Servicios profesionales de análisis y estudios especializados</p>
+            <div class="section-header">
+                <h2>Aplicaciones de la Batimetría</h2>
+                <p>Nuestro servicio de batimetría es esencial para diversos proyectos de ingeniería, navegación y gestión de recursos hídricos</p>
+            </div>
+            
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h3>Infraestructura Portuaria</h3>
+                    <p>Diseño, construcción y mantenimiento de puertos, muelles, terminales marítimos y estructuras costeras</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Estudios para dragado y mantenimiento</li>
+                        <li><i class="fas fa-check"></i> Diseño de canales de acceso</li>
+                        <li><i class="fas fa-check"></i> Evaluación de áreas de fondeo</li>
+                        <li><i class="fas fa-check"></i> Monitoreo de sedimentación</li>
+                    </ul>
                 </div>
-                <div>
-                    <h4>Contacto</h4>
-                    <p>📧 contacto@labcipda.cl</p>
-                    <p>📱 +56 9 1234 5678</p>
-                    <p>📍 Santiago, Chile</p>
+                
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-bridge"></i>
+                    </div>
+                    <h3>Ingeniería de Puentes</h3>
+                    <p>Estudios para diseño de cimentaciones, evaluación de socavación y mantenimiento de estructuras sobre agua</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Evaluación de socavación en pilares</li>
+                        <li><i class="fas fa-check"></i> Estudios para cimentaciones profundas</li>
+                        <li><i class="fas fa-check"></i> Monitoreo de erosión fluvial</li>
+                        <li><i class="fas fa-check"></i> Inspección de infraestructura submarina</li>
+                    </ul>
                 </div>
-                <div>
-                    <h4>Servicios</h4>
-                    <p><a href="index.html#servicios">Mecánica de Suelos</a></p>
-                    <p><a href="index.html#servicios">Análisis de Agua</a></p>
-                    <p><a href="index.html#servicios">Calidad del Aire</a></p>
+                
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-dam"></i>
+                    </div>
+                    <h3>Recursos Hídricos</h3>
+                    <p>Gestión de embalses, estudios de capacidad y monitoreo de sedimentación en cuerpos de agua</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Cálculo de capacidad de embalses</li>
+                        <li><i class="fas fa-check"></i> Monitoreo de sedimentación</li>
+                        <li><i class="fas fa-check"></i> Estudios de pérdida de capacidad</li>
+                        <li><i class="fas fa-check"></i> Planificación de dragados</li>
+                    </ul>
                 </div>
-                <div>
-                    <h4>Horario de Atención</h4>
-                    <p>Lunes a Viernes</p>
-                    <p>8:30 AM - 6:00 PM</p>
-                    <p>Sábados: Solo con cita previa</p>
+                
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Proyectos Industriales</h3>
+                    <p>Instalación de tuberías submarinas, cables, outfalls y estructuras para proyectos energéticos y mineros</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Instalación de tuberías submarinas</li>
+                            <li><i class="fas fa-check"></i> Tendido de cables submarinos</li>
+                            <li><i class="fas fa-check"></i> Diseño de emisarios submarinos</li>
+                            <li><i class="fas fa-check"></i> Estudios para plantas desaladoras</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Laboratorio CIPDA. Todos los derechos reservados.</p>
+        </section>
+
+        <!-- SECCIÓN DE METODOLOGÍA -->
+        <section class="section methodology-section bathymetry-methodology">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestra Metodología</h2>
+                    <p>Proceso sistemático que garantiza resultados precisos y confiables en cada levantamiento batimétrico</p>
+                </div>
+                
+                <div class="methodology-timeline">
+                    <div class="methodology-step">
+                        <div class="step-visual">
+                            <div class="step-number">1</div>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3><i class="fas fa-clipboard-check"></i> Planificación y Diseño</h3>
+                            <p>Definición de objetivos, diseño de malla de levantamiento, selección de equipos y planificación logística para el trabajo de campo</p>
+                            <div class="step-details">
+                                <span><i class="fas fa-map-marked-alt"></i> Diseño de malla de levantamiento</span>
+                                <span><i class="fas fa-tools"></i> Selección de equipos</span>
+                                <span><i class="fas fa-calendar"></i> Planificación logística</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="methodology-step">
+                        <div class="step-visual">
+                            <div class="step-number">2</div>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3><i class="fas fa-ship"></i> Adquisición en Campo</h3>
+                            <p>Levantamiento batimétrico con ecosonda, sistema GNSS RTK, registro de datos y control de calidad en tiempo real</p>
+                            <div class="step-details">
+                                <span><i class="fas fa-wave-square"></i> Adquisición con ecosonda</span>
+                                <span><i class="fas fa-satellite"></i> Posicionamiento GNSS RTK</span>
+                                <span><i class="fas fa-clipboard-check"></i> Control de calidad en campo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="methodology-step">
+                        <div class="step-visual">
+                            <div class="step-number">3</div>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3><i class="fas fa-laptop-code"></i> Procesamiento de Datos</h3>
+                            <p>Corrección de datos, eliminación de ruido, interpolación y generación de modelos digitales del terreno submarino</p>
+                            <div class="step-details">
+                                <span><i class="fas fa-filter"></i> Filtrado y corrección de datos</span>
+                                <span><i class="fas fa-project-diagram"></i> Generación de MDT</span>
+                                <span><i class="fas fa-calculator"></i> Cálculo de volúmenes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="methodology-step">
+                        <div class="step-visual">
+                            <div class="step-number">4</div>
+                            <div class="step-connector"></div>
+                        </div>
+                        <div class="step-content">
+                            <h3><i class="fas fa-chart-bar"></i> Análisis y Modelado</h3>
+                            <p>Generación de mapas batimétricos, perfiles, cálculo de áreas y volúmenes, análisis de cambios temporales</p>
+                            <div class="step-details">
+                                <span><i class="fas fa-map"></i> Generación de mapas</span>
+                                <span><i class="fas fa-chart-line"></i> Análisis de perfiles</span>
+                                <span><i class="fas fa-history"></i> Estudios de cambios temporales</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="methodology-step">
+                        <div class="step-visual">
+                            <div class="step-number">5</div>
+                        </div>
+                        <div class="step-content">
+                            <h3><i class="fas fa-file-contract"></i> Informe y Entrega</h3>
+                            <p>Elaboración de informe técnico, entrega de productos digitales, presentación de resultados y recomendaciones</p>
+                            <div class="step-details">
+                                <span><i class="fas fa-file-alt"></i> Informe técnico completo</span>
+                                <span><i class="fas fa-database"></i> Entrega de datos digitales</span>
+                                <span><i class="fas fa-presentation"></i> Presentación de resultados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- SECCIÓN DE EQUIPOS Y TECNOLOGÍA -->
+        <section class="section equipment-section bathymetry-equipment">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Tecnología y Equipos Especializados</h2>
+                    <p>Utilizamos equipos de última generación para garantizar máxima precisión en nuestros levantamientos batimétricos</p>
+                </div>
+                
+                <div class="equipment-grid">
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="imagenes/topo.jpg" alt="Ecosonda multihaz" loading="lazy">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Sistemas de Ecosonda</h3>
+                            <p>Ecosondas monohaz y multihaz de alta precisión para medición de profundidades con resolución centimétrica</p>
+                            <div class="equipment-specs">
+                                <span><i class="fas fa-wave-square"></i> Frecuencias 200kHz-700kHz</span>
+                                <span><i class="fas fa-bullseye"></i> Precisión ±1cm</span>
+                                <span><i class="fas fa-expand-arrows-alt"></i> Ancho de barrido ajustable</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="imagenes/perforacioneje3.jpeg" alt="Sistema GNSS RTK" loading="lazy">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Sistemas de Posicionamiento</h3>
+                            <p>Receptores GNSS RTK de alta precisión para posicionamiento centimétrico en tiempo real</p>
+                            <div class="equipment-specs">
+                                <span><i class="fas fa-satellite"></i> GPS/GLONASS/Galileo</span>
+                                <span><i class="fas fa-bullseye"></i> Precisión ±2cm horizontal</span>
+                                <span><i class="fas fa-sync-alt"></i> Corrección RTK en tiempo real</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="equipment-card">
+                        <div class="equipment-image">
+                            <img src="imagenes/densidad_4.jpeg" alt="Software especializado" loading="lazy">
+                        </div>
+                        <div class="equipment-content">
+                            <h3>Software de Procesamiento</h3>
+                            <p>Software especializado para procesamiento e interpretación de datos batimétricos: Hypack, SonarWiz, QPS</p>
+                            <div class="equipment-specs">
+                                <span><i class="fas fa-laptop-code"></i> Procesamiento avanzado</span>
+                                <span><i class="fas fa-cube"></i> Modelado 3D</span>
+                                <span><i class="fas fa-chart-bar"></i> Análisis estadístico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="technology-showcase">
+                    <h3><i class="fas fa-microchip"></i> Tecnologías Utilizadas</h3>
+                    <div class="technology-grid">
+                        <div class="technology-item">
+                            <i class="fas fa-satellite-dish"></i>
+                            <h4>GNSS RTK</h4>
+                            <p>Posicionamiento centimétrico con corrección en tiempo real</p>
+                        </div>
+                        <div class="technology-item">
+                            <i class="fas fa-wave-square"></i>
+                            <h4>Ecosonda Multihaz</h4>
+                            <p>Barrido de fondo con múltiples haces para cobertura completa</p>
+                        </div>
+                        <div class="technology-item">
+                            <i class="fas fa-sonar"></i>
+                            <h4>Sonar de Barrido Lateral</h5>
+                            <p>Imágenes de alta resolución del fondo marino</p>
+                        </div>
+                        <div class="technology-item">
+                            <i class="fas fa-drone"></i>
+                            <h4>USV (Vehículos No Tripulados)</h4>
+                            <p>Levantamientos en aguas poco profundas y de difícil acceso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PROYECTOS DESTACADOS -->
+        <section class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Proyectos Destacados en Batimetría</h2>
+                    <p>Algunos de nuestros trabajos más importantes en levantamientos batimétricos</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="imagenes/perforacion_rio_puente_clarita.png" alt="Batimetría para puente" loading="lazy">
+                            <div class="project-badge">Ingeniería Civil</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Estudio Batimétrico para Puente</h3>
+                            <p>Levantamiento detallado del lecho del río para diseño de cimentaciones y evaluación de socavación</p>
+                            <div class="project-details">
+                                <span><i class="fas fa-ruler"></i> 2.5 km de río</span>
+                                <span><i class="fas fa-water"></i> Prof. máxima: 15m</span>
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="imagenes/topo.jpg" alt="Batimetría portuaria" loading="lazy">
+                            <div class="project-badge">Infraestructura Portuaria</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Dragado y Mantenimiento Portuario</h3>
+                            <p>Levantamiento batimétrico para cálculo de volúmenes de dragado y mantenimiento de canales de acceso</p>
+                            <div class="project-details">
+                                <span><i class="fas fa-ruler"></i> 45 hectáreas</span>
+                                <span><i class="fas fa-water"></i> Prof. máxima: 22m</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="imagenes/densidad_4.jpeg" alt="Batimetría para embalse" loading="lazy">
+                            <div class="project-badge">Recursos Hídricos</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Capacidad de Embalse</h3>
+                            <p>Levantamiento completo para cálculo de capacidad actual y planificación de obras de mantenimiento</p>
+                            <div class="project-details">
+                                <span><i class="fas fa-ruler"></i> 120 hectáreas</span>
+                                <span><i class="fas fa-water"></i> Prof. máxima: 45m</span>
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE COTIZACIÓN -->
+        <section class="section cta-section" id="contact-section">
+            <div class="container">
+                <div class="cta-card bathymetry-cta">
+                    <div class="cta-content">
+                        <div class="cta-badge">
+                            <i class="fas fa-clock"></i> Respuesta en 24 horas
+                        </div>
+                        <h2>¿Necesita un levantamiento batimétrico para su proyecto?</h2>
+                        <p>Solicite una cotización personalizada hoy mismo. Nuestro equipo de hidrógrafos le brindará asesoría técnica especializada y un presupuesto detallado sin compromiso.</p>
+                        
+                        <div class="cta-features">
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Asesoría hidrográfica gratuita</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Propuesta técnica detallada</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Equipo especializado en campo</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Entrega de productos digitales</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <a href="index.html#cotizacion" class="btn btn-primary">
+                                <i class="fas fa-calculator"></i> Solicitar Cotización
+                            </a>
+                            <a href="tel:+51921593127" class="btn btn-outline">
+                                <i class="fas fa-phone"></i> Consulta Técnica
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-image">
+                        <img src="imagenes/cajaconmuestras1.jpeg" alt="Equipo de batimetría en campo" loading="lazy">
+                        <div class="image-overlay">
+                            <h4><i class="fas fa-user-tie"></i> Ing. Hidrógrafo Especializado</h4>
+                            <p>Análisis e interpretación de datos batimétricos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ ESPECÍFICO -->
+        <section class="section faq-section bathymetry-faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas Frecuentes sobre Batimetría</h2>
+                    <p>Resolvemos las dudas más comunes sobre nuestro servicio de levantamientos batimétricos</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué precisión tienen los levantamientos batimétricos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>La precisión típica es: Vertical: ±5 cm (con GNSS RTK y corrección de mareas). Horizontal: ±2 cm (con GNSS RTK). Esta precisión puede variar según las condiciones ambientales, equipos utilizados y profundidad del agua. Para proyectos que requieren mayor precisión, utilizamos técnicas especializadas y equipos de alta gama.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué factores afectan el costo de un levantamiento batimétrico?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Los principales factores son: 1) Área a levantar (hectáreas o km lineales), 2) Profundidad del agua, 3) Accesibilidad del sitio, 4) Tipo de equipo requerido (monohaz vs multihaz), 5) Nivel de detalle (espaciamiento entre líneas), 6) Productos entregables (mapas, modelos 3D, cálculos de volumen), 7) Plazo de entrega. Ofrecemos cotizaciones personalizadas después de evaluar estos factores.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cuál es la diferencia entre ecosonda monohaz y multihaz?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>La ecosonda monohaz emite un solo haz vertical, midiendo la profundidad directamente bajo la embarcación. La multihaz emite múltiples haces en abanico, cubriendo una franja del fondo en cada pasada. Ventajas: Monohaz: Mayor precisión puntual, menor costo. Multihaz: Mayor cobertura, detección de obstáculos, mejor para mapeo de áreas extensas. Seleccionamos el equipo según los objetivos del proyecto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Trabajan en condiciones climáticas adversas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Contamos con equipos y protocolos para trabajar en diversas condiciones, pero existen limitaciones: Condiciones óptimas: Viento < 15 nudos, olas < 0.5m. Condiciones aceptables: Viento 15-25 nudos, olas 0.5-1.5m (con equipo especializado). Condiciones no adecuadas: Viento > 25 nudos, olas > 1.5m, tormentas eléctricas. La seguridad del personal y la calidad de los datos son nuestra prioridad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Qué información necesito proporcionar para solicitar una cotización?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Necesitamos: 1) Ubicación del proyecto (coordenadas o plano), 2) Objetivos del levantamiento (dragado, ingeniería, navegación, etc.), 3) Área aproximada (hectáreas o dimensiones), 4) Profundidad estimada, 5) Plazo requerido, 6) Productos necesarios (mapas, cálculos de volumen, etc.), 7) Condiciones de acceso. Con esta información podemos preparar una propuesta técnica y económica detallada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER MEJORADO -->
+        <footer class="footer" id="contacto">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <img src="imagenes/LOGO1.png" alt="Logo CIPDA">
+                            <div class="logo-text">
+                                <h3>CIPDA</h3>
+                                <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                            </div>
+                        </div>
+                        <p class="footer-description">Especialistas en batimetría y topografía submarina con más de 10 años de experiencia en proyectos de ingeniería y gestión de recursos hídricos.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Servicios Relacionados</h4>
+                        <ul class="footer-links">
+                            <li><a href="perforacion-diamantina.html">Perforación Diamantina</a></li>
+                            <li><a href="refraccion-sismica.html">Refracción Sísmica</a></li>
+                            <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                            <li><a href="articulo-suelos.html">Análisis Geotécnicos</a></li>
+                            <li><a href="index.html#servicios">Análisis de Agua</a></li>
+                            <li><a href="index.html#servicios">Calidad del Aire</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Contacto Especializado</h4>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+51921593127">+51 921 593 127</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:cipdalab@gmail.com">cipdalab@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-tie"></i>
+                                <span>Ing. Hidrógrafo - Especialista en Batimetría</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Recursos Técnicos</h4>
+                        <p>Descargue nuestros recursos sobre batimetría</p>
+                        <a href="#" class="btn btn-outline" style="width: 100%; margin-bottom: 1rem;">
+                            <i class="fas fa-download"></i> Guía de Levantamientos Batimétricos
+                        </a>
+                        <a href="#" class="btn btn-outline" style="width: 100%; margin-bottom: 1rem;">
+                            <i class="fas fa-file-pdf"></i> Ejemplo de Informe Batimétrico
+                        </a>
+                        <div class="certification-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Certificados en Normas IHO</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Laboratorio CIPDA. Todos los derechos reservados.</p>
+                    <div class="footer-legal">
+                        <a href="#">Política de Privacidad</a>
+                        <a href="#">Términos y Condiciones</a>
+                        <a href="index.html">Volver al Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- BOTONES FLOTANTES -->
+        <div class="floating-buttons">
+            <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Batimetría" 
+               class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp sobre Batimetría">
+                <i class="fab fa-whatsapp"></i>
+                <span class="tooltip">Consulta sobre Batimetría</span>
+            </a>
+            <a href="tel:+51921593127" class="phone-float" aria-label="Llamar por teléfono">
+                <i class="fas fa-phone"></i>
+                <span class="tooltip">Llámanos</span>
+            </a>
+            <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+                <i class="fas fa-chevron-up"></i>
+                <span class="tooltip">Volver arriba</span>
+            </button>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
-</body>
+        <script src="script.js?v=3"></script>
+        
+        <script>
+            // JavaScript específico para la página de Batimetría
+            document.addEventListener('DOMContentLoaded', function() {
+                // Galería de imágenes
+                const mainImage = document.querySelector('.main-image img');
+                const thumbnails = document.querySelectorAll('.thumb img');
+                
+                thumbnails.forEach(thumb => {
+                    thumb.addEventListener('click', function() {
+                        mainImage.src = this.src;
+                        
+                        // Actualizar clase activa
+                        thumbnails.forEach(t => t.parentElement.classList.remove('active'));
+                        this.parentElement.classList.add('active');
+                    });
+                });
+                
+                // FAQ específico
+                const faqQuestions = document.querySelectorAll('.faq-question');
+                
+                faqQuestions.forEach(question => {
+                    question.addEventListener('click', function() {
+                        this.classList.toggle('active');
+                        const answer = this.nextElementSibling;
+                        
+                        if (this.classList.contains('active')) {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                        } else {
+                            answer.style.maxHeight = '0';
+                        }
+                        
+                        // Cerrar otras preguntas
+                        faqQuestions.forEach(otherQuestion => {
+                            if (otherQuestion !== this && otherQuestion.classList.contains('active')) {
+                                otherQuestion.classList.remove('active');
+                                otherQuestion.nextElementSibling.style.maxHeight = '0';
+                            }
+                        });
+                    });
+                });
+                
+                // Animación de estadísticas
+                const stats = document.querySelectorAll('.stat-number');
+                stats.forEach(stat => {
+                    const text = stat.textContent;
+                    if (text.includes('±')) {
+                        // Para valores de precisión, no animar
+                        return;
+                    }
+                    
+                    const finalValue = parseInt(text);
+                    if (!isNaN(finalValue)) {
+                        let currentValue = 0;
+                        const increment = finalValue / 30;
+                        const timer = setInterval(() => {
+                            currentValue += increment;
+                            if (currentValue >= finalValue) {
+                                currentValue = finalValue;
+                                clearInterval(timer);
+                            }
+                            stat.textContent = Math.floor(currentValue) + (text.includes('+') ? '+' : '');
+                        }, 40);
+                    }
+                });
+                
+                // Efecto de agua en el hero
+                const waterWaves = document.querySelectorAll('.water-wave');
+                waterWaves.forEach((wave, index) => {
+                    wave.style.animationDelay = `${index * 0.8}s`;
+                });
+                
+                // Efecto de profundidad
+                const depthLine = document.querySelector('.depth-line');
+                if (depthLine) {
+                    setTimeout(() => {
+                        depthLine.style.height = '100%';
+                    }, 500);
+                }
+            });
+        </script>
+    </body>
 
-</html>
+    </html>
