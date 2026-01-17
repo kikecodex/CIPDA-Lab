@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Monitoreo de Calidad del Aire - GEODINA. Material particulado PM2.5, PM10, gases contaminantes, ruido ambiental. Cumplimiento ECA Aire.">
+    <meta name="keywords"
+        content="calidad del aire, PM2.5, PM10, monitoreo ambiental, ruido, gases, emisiones, ECA, Huaraz">
+    <meta name="author" content="Laboratorio GEODINA">
+    <title>Calidad del Aire | GEODINA Lab - Monitoreo Ambiental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio GEODINA">
+                <div class="logo-text">
+                    <h1>GEODINA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+                            Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="service-hero air-hero">
+        <div class="hero-background"
+            style="background-image: linear-gradient(rgba(46, 134, 171, 0.85), rgba(34, 85, 96, 0.9)), url('imagenes/muestra2.jpeg');">
+        </div>
+
+        <div class="container hero-content">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="current">Calidad del Aire</span>
+            </nav>
+
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-wind"></i> Monitoreo Ambiental Integral
+                </div>
+                <h1 class="hero-title">Calidad del <span class="highlight">Aire</span></h1>
+                <p class="hero-subtitle">Monitoreo y análisis de contaminantes atmosféricos para garantizar el
+                    cumplimiento de los Estándares de Calidad Ambiental (ECA)</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">PM2.5</span>
+                        <span class="stat-label">Material particulado fino</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Monitoreo continuo</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Parámetros medidos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">ECA</span>
+                        <span class="stat-label">Cumplimiento normativo</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Solicitar Monitoreo
+                    </a>
+                    <a href="#servicios-aire" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i> Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Monitoreo de Calidad del Aire</h2>
+                <p>Evaluamos la calidad del aire que respiras mediante equipos certificados y metodologías
+                    estandarizadas</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-main">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-lungs"></i>
+                            <h3>Protegiendo la Salud y el Medio Ambiente</h3>
+                        </div>
+                        <p>La calidad del aire es un factor determinante para la salud pública y el bienestar ambiental.
+                            Nuestros servicios de monitoreo permiten identificar fuentes de contaminación, verificar el
+                            cumplimiento de normativas y tomar decisiones informadas para la gestión ambiental.</p>
+
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="fas fa-smog"></i>
+                                <div>
+                                    <h4>Material Particulado (PM2.5 / PM10)</h4>
+                                    <p>Medición de partículas finas y gruesas que afectan el sistema respiratorio</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-cloud"></i>
+                                <div>
+                                    <h4>Gases Contaminantes</h4>
+                                    <p>CO, NO2, SO2, O3, H2S y compuestos orgánicos volátiles (COVs)</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-volume-up"></i>
+                                <div>
+                                    <h4>Ruido Ambiental</h4>
+                                    <p>Medición de niveles sonoros para cumplimiento de ECA Ruido</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-broadcast-tower"></i>
+                                <div>
+                                    <h4>Radiaciones No Ionizantes</h4>
+                                    <p>Evaluación de campos electromagnéticos de antenas y equipos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img src="imagenes/muestra2.jpeg" alt="Equipo de monitoreo de calidad del aire"
+                                loading="lazy">
+                            <div class="image-caption">Estación de monitoreo de calidad del aire</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clipboard-check"></i> Normativas Aplicables</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ECA Aire</span>
+                                    <span class="spec-value">DS 003-2017-MINAM</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ECA Ruido</span>
+                                    <span class="spec-value">DS 085-2003-PCM</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">LMP Emisiones</span>
+                                    <span class="spec-value">DS 003-2002-PRODUCE</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Métodos</span>
+                                    <span class="spec-value">EPA, NIOSH, NTP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Valores ECA Aire (24h)</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-circle" style="color: #e74c3c; font-size: 0.5rem;"></i>
+                                <div>
+                                    <span class="spec-label">PM2.5</span>
+                                    <span class="spec-value">50 µg/m³</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-circle" style="color: #f39c12; font-size: 0.5rem;"></i>
+                                <div>
+                                    <span class="spec-label">PM10</span>
+                                    <span class="spec-value">100 µg/m³</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-circle" style="color: #3498db; font-size: 0.5rem;"></i>
+                                <div>
+                                    <span class="spec-label">SO2</span>
+                                    <span class="spec-value">250 µg/m³</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-circle" style="color: #27ae60; font-size: 0.5rem;"></i>
+                                <div>
+                                    <span class="spec-label">NO2</span>
+                                    <span class="spec-value">200 µg/m³</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS DE AIRE -->
+    <section class="section applications-section" id="servicios-aire">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios de Monitoreo</h2>
+                <p>Soluciones integrales para la evaluación de la calidad del aire en diferentes contextos</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <h3>Material Particulado</h3>
+                    <p>Medición de partículas suspendidas en el aire que afectan la salud respiratoria</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> PM2.5 (partículas finas)</li>
+                        <li><i class="fas fa-check"></i> PM10 (partículas inhalables)</li>
+                        <li><i class="fas fa-check"></i> Partículas Totales en Suspensión (PTS)</li>
+                        <li><i class="fas fa-check"></i> Monitoreo 24 horas continuo</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-cloud-meatball"></i>
+                    </div>
+                    <h3>Gases Contaminantes</h3>
+                    <p>Determinación de concentraciones de gases nocivos para la salud y el ambiente</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Monóxido de Carbono (CO)</li>
+                        <li><i class="fas fa-check"></i> Dióxido de Nitrógeno (NO2)</li>
+                        <li><i class="fas fa-check"></i> Dióxido de Azufre (SO2)</li>
+                        <li><i class="fas fa-check"></i> Ozono (O3)</li>
+                        <li><i class="fas fa-check"></i> Sulfuro de Hidrógeno (H2S)</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-volume-high"></i>
+                    </div>
+                    <h3>Ruido Ambiental</h3>
+                    <p>Evaluación de niveles de presión sonora según zonas de aplicación</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ruido ambiental diurno/nocturno</li>
+                        <li><i class="fas fa-check"></i> Ruido ocupacional (8 horas)</li>
+                        <li><i class="fas fa-check"></i> Mapeo de ruido</li>
+                        <li><i class="fas fa-check"></i> Vibraciones</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-radiation"></i>
+                    </div>
+                    <h3>Radiaciones No Ionizantes</h3>
+                    <p>Medición de campos electromagnéticos generados por equipos y antenas</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Antenas de telecomunicaciones</li>
+                        <li><i class="fas fa-check"></i> Líneas de alta tensión</li>
+                        <li><i class="fas fa-check"></i> Equipos industriales</li>
+                        <li><i class="fas fa-check"></i> Cumplimiento DS 010-2005-PCM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APLICACIONES -->
+    <section class="section methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aplicaciones del Monitoreo</h2>
+                <p>Nuestros servicios se aplican en diversos contextos ambientales e industriales</p>
+            </div>
+
+            <div class="methodology-timeline">
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number"><i class="fas fa-industry"></i></div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Estudios de Impacto Ambiental (EIA)</h3>
+                        <p>Línea base ambiental para proyectos mineros, industriales, viales y de construcción.
+                            Monitoreo de parámetros de calidad del aire requeridos por la normativa ambiental.</p>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number"><i class="fas fa-hard-hat"></i></div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Salud Ocupacional</h3>
+                        <p>Evaluación de la exposición de trabajadores a contaminantes. Medición de polvo, humos
+                            metálicos, solventes y ruido ocupacional según RM 375-2008-TR.</p>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number"><i class="fas fa-file-contract"></i></div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Instrumentos de Gestión Ambiental</h3>
+                        <p>Monitoreos periódicos para cumplimiento de compromisos ambientales establecidos en PAMA, EIA,
+                            DIA y otros instrumentos de gestión.</p>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number"><i class="fas fa-city"></i></div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Gestión Ambiental Municipal</h3>
+                        <p>Monitoreo de la calidad del aire urbano para diagnóstico ambiental local, planificación
+                            territorial y gestión de calidad ambiental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section" id="contact-section">
+        <div class="container">
+            <div class="cta-card air-cta">
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <i class="fas fa-wind"></i> Equipos Calibrados
+                    </div>
+                    <h2>¿Necesita un monitoreo de calidad del aire?</h2>
+                    <p>Contamos con equipos calibrados y personal certificado para realizar monitoreos en cualquier
+                        ubicación. Solicite una cotización sin compromiso.</p>
+
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Equipos de alta precisión</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personal capacitado</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Informes con interpretación</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cobertura nacional</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="index.html#cotizacion" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+51921593127" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Consulta Directa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-image">
+                    <img src="imagenes/densidad_4.jpeg" alt="Equipo de monitoreo ambiental" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes sobre Calidad del Aire</h2>
+                <p>Información importante sobre nuestros servicios de monitoreo ambiental</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto tiempo dura un monitoreo de calidad del aire?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Según la normativa peruana (DS 003-2017-MINAM), el monitoreo estándar es de 24 horas
+                            continuas para PM2.5, PM10, SO2, NO2. Para CO se considera 8 horas y para Ozono, 8 horas
+                            también. El ruido ambiental se mide en períodos diurno (7am-10pm) y nocturno (10pm-7am).
+                            Realizamos monitoreos de mayor duración según requerimientos específicos del proyecto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué equipos utilizan para el monitoreo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Utilizamos equipos certificados y calibrados: Muestreadores de alto y bajo volumen para
+                            material particulado (Hi-Vol, Low-Vol), analizadores de gases (tren de muestreo con
+                            soluciones captadoras), sonómetros integradores clase 1 para ruido, y medidores de campos
+                            electromagnéticos. Todos los equipos cuentan con certificados de calibración vigentes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuáles son los límites permitidos para PM2.5?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Según el ECA Aire (DS 003-2017-MINAM), el límite para PM2.5 es de 50 µg/m³ para 24 horas y 25
+                            µg/m³ como promedio anual. Valores superiores indican que la calidad del aire no es adecuada
+                            y puede afectar la salud de la población, especialmente grupos vulnerables como niños,
+                            ancianos y personas con enfermedades respiratorias.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿En qué casos es obligatorio el monitoreo de calidad del aire?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Es obligatorio en: 1) Estudios de Impacto Ambiental (EIA) y otros instrumentos de gestión
+                            ambiental, 2) Cumplimiento de compromisos ambientales de proyectos aprobados, 3)
+                            Fiscalizaciones del OEFA u otras autoridades, 4) Actividades que generen emisiones
+                            atmosféricas (industrias, minería, construcción), 5) Evaluaciones de salud ocupacional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Realizan monitoreos en zonas alejadas?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, contamos con equipos portátiles alimentados por baterías y paneles solares que nos
+                            permiten realizar monitoreos en zonas remotas sin acceso a energía eléctrica. Hemos
+                            trabajado en proyectos mineros de altura, comunidades rurales y áreas protegidas. El costo
+                            varía según la accesibilidad y logística requerida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo GEODINA">
+                        <div class="logo-text">
+                            <h3>GEODINA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Especialistas en monitoreo de calidad del aire con equipos modernos y
+                        metodologías estandarizadas.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" style="display:none"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="display:none"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="display:none"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios Relacionados</h4>
+                    <ul class="footer-links">
+                        <li><a href="analisis-agua.html">Análisis de Agua</a></li>
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="refraccion-sismica.html">Refracción Sísmica</a></li>
+                        <li><a href="perforacion-diamantina.html">Perforación Diamantina</a></li>
+                        <li><a href="batimetria.html">Batimetría</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+51921593127">+51 921 593 127</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:GEODINAlab@gmail.com">GEODINAlab@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 8:00 AM - 7:00 PM<br>Sáb: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Certificaciones</h4>
+                    <div class="certifications-grid" style="gap: 0.5rem;">
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-award"></i>
+                            <h4 style="font-size: 0.75rem;">EPA</h4>
+                        </div>
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 style="font-size: 0.75rem;">NIOSH</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio GEODINA. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    <a href="index.html">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Monitoreo%20de%20Calidad%20del%20Aire"
+            class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp sobre Calidad del Aire">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Consulta sobre Aire</span>
+        </a>
+        <a href="#" class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

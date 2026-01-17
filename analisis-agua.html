@@ -1,0 +1,617 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Análisis de Agua - Laboratorio GEODINA. Análisis fisicoquímico, microbiológico, metales pesados y aguas residuales. Cumplimiento normativo DS 031-2010-SA.">
+    <meta name="keywords"
+        content="análisis de agua, análisis fisicoquímico, análisis microbiológico, metales pesados, DBO, DQO, agua potable, Huaraz">
+    <meta name="author" content="Laboratorio GEODINA">
+    <title>Análisis de Agua | GEODINA Lab - Laboratorio Acreditado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio GEODINA">
+                <div class="logo-text">
+                    <h1>GEODINA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+                            Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="service-hero water-hero">
+        <div class="hero-background"
+            style="background-image: linear-gradient(rgba(0, 82, 147, 0.8), rgba(0, 51, 102, 0.9)), url('imagenes/cajaconmuestras1.jpeg');">
+        </div>
+
+        <div class="water-particles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+
+        <div class="container hero-content">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="current">Análisis de Agua</span>
+            </nav>
+
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-tint"></i> Laboratorio Acreditado
+                </div>
+                <h1 class="hero-title">Análisis de <span class="highlight">Agua</span></h1>
+                <p class="hero-subtitle">Análisis completos de calidad de agua para consumo humano, industrial, agrícola
+                    y ambiental con cumplimiento normativo</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Parámetros analizados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">48h</span>
+                        <span class="stat-label">Resultados preliminares</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Cumplimiento normativo</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Muestras procesadas</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-flask"></i> Solicitar Análisis
+                    </a>
+                    <a href="#tipos-analisis" class="btn btn-outline">
+                        <i class="fas fa-list"></i> Ver Análisis Disponibles
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Por qué es importante el Análisis de Agua?</h2>
+                <p>El agua es esencial para la vida y la industria. Garantizar su calidad es fundamental para proteger
+                    la salud y cumplir con las normativas vigentes</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-main">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-microscope"></i>
+                            <h3>Análisis Integral de Calidad de Agua</h3>
+                        </div>
+                        <p>Nuestro laboratorio ofrece un amplio espectro de análisis para evaluar la calidad del agua
+                            según su uso: consumo humano, industrial, agrícola, recreacional o para descarga. Cumplimos
+                            con las normativas nacionales DS 031-2010-SA y los Estándares de Calidad Ambiental (ECA)
+                            para Agua.</p>
+
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Análisis Fisicoquímico Completo</h4>
+                                    <p>pH, conductividad, turbidez, dureza, alcalinidad, cloruros, sulfatos y más</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Análisis Microbiológico</h4>
+                                    <p>Coliformes totales, coliformes termotolerantes, E. coli, bacterias heterotróficas
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Metales Pesados</h4>
+                                    <p>Arsénico, plomo, cadmio, mercurio, cromo, hierro, manganeso y otros</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Aguas Residuales</h4>
+                                    <p>DBO5, DQO, sólidos suspendidos, aceites y grasas, fenoles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img src="imagenes/cajaconmuestras1.jpeg" alt="Análisis de agua en laboratorio"
+                                loading="lazy">
+                            <div class="image-caption">Procesamiento de muestras de agua en nuestro laboratorio</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clipboard-check"></i> Normativas Aplicables</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Agua Potable</span>
+                                    <span class="spec-value">DS 031-2010-SA (Reglamento de Calidad del Agua)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ECA Agua</span>
+                                    <span class="spec-value">DS 004-2017-MINAM (Estándares de Calidad Ambiental)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Vertimientos</span>
+                                    <span class="spec-value">DS 003-2010-MINAM (Límites Máximos Permisibles)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Métodos</span>
+                                    <span class="spec-value">APHA, EPA, ISO 17025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-calendar-alt"></i> Tiempos de Entrega</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-time">24-48h</span>
+                                <span class="timeline-text">Parámetros básicos (pH, CE, turbidez)</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">3-5 días</span>
+                                <span class="timeline-text">Análisis fisicoquímico completo</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">5-7 días</span>
+                                <span class="timeline-text">Metales pesados (ICP-OES)</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-time">3-5 días</span>
+                                <span class="timeline-text">Análisis microbiológico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPOS DE ANÁLISIS -->
+    <section class="section applications-section" id="tipos-analisis">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tipos de Análisis de Agua</h2>
+                <p>Ofrecemos análisis especializados según el tipo de agua y su uso previsto</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3>Agua Potable</h3>
+                    <p>Verificación de la calidad del agua para consumo humano según DS 031-2010-SA</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Parámetros organolépticos</li>
+                        <li><i class="fas fa-check"></i> Parámetros fisicoquímicos</li>
+                        <li><i class="fas fa-check"></i> Parámetros microbiológicos</li>
+                        <li><i class="fas fa-check"></i> Metales y compuestos inorgánicos</li>
+                        <li><i class="fas fa-check"></i> Cloro residual libre</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Aguas Residuales</h3>
+                    <p>Caracterización de efluentes industriales y domésticos para cumplimiento de LMP</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> DBO5 (Demanda Bioquímica de Oxígeno)</li>
+                        <li><i class="fas fa-check"></i> DQO (Demanda Química de Oxígeno)</li>
+                        <li><i class="fas fa-check"></i> Sólidos Suspendidos Totales</li>
+                        <li><i class="fas fa-check"></i> Aceites y Grasas</li>
+                        <li><i class="fas fa-check"></i> Coliformes termotolerantes</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-river"></i>
+                    </div>
+                    <h3>Aguas Superficiales</h3>
+                    <p>Monitoreo de ríos, lagos y lagunas para evaluación de calidad ambiental</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Oxígeno Disuelto</li>
+                        <li><i class="fas fa-check"></i> Nutrientes (nitratos, fosfatos)</li>
+                        <li><i class="fas fa-check"></i> Metales pesados</li>
+                        <li><i class="fas fa-check"></i> Hidrocarburos totales</li>
+                        <li><i class="fas fa-check"></i> Parámetros biológicos</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Aguas Subterráneas</h3>
+                    <p>Caracterización de pozos y manantiales para uso doméstico o industrial</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Dureza y alcalinidad</li>
+                        <li><i class="fas fa-check"></i> Hierro y manganeso</li>
+                        <li><i class="fas fa-check"></i> Arsénico y fluoruros</li>
+                        <li><i class="fas fa-check"></i> Nitratos y sulfatos</li>
+                        <li><i class="fas fa-check"></i> Análisis de potabilización</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARÁMETROS DETALLADOS -->
+    <section class="section methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Parámetros Analizados</h2>
+                <p>Lista completa de parámetros disponibles en nuestro laboratorio</p>
+            </div>
+
+            <div class="parameters-grid">
+                <div class="parameter-category">
+                    <h3><i class="fas fa-thermometer-half"></i> Parámetros Físicos</h3>
+                    <ul class="parameter-list">
+                        <li>Temperatura</li>
+                        <li>Turbidez (NTU)</li>
+                        <li>Color (UC Pt-Co)</li>
+                        <li>Olor</li>
+                        <li>Conductividad Eléctrica</li>
+                        <li>Sólidos Totales Disueltos (TDS)</li>
+                        <li>Sólidos Suspendidos Totales (SST)</li>
+                        <li>Sólidos Sedimentables</li>
+                    </ul>
+                </div>
+
+                <div class="parameter-category">
+                    <h3><i class="fas fa-flask"></i> Parámetros Químicos</h3>
+                    <ul class="parameter-list">
+                        <li>pH</li>
+                        <li>Alcalinidad Total</li>
+                        <li>Dureza Total (CaCO3)</li>
+                        <li>Cloruros (Cl-)</li>
+                        <li>Sulfatos (SO4²-)</li>
+                        <li>Nitratos (NO3-)</li>
+                        <li>Nitritos (NO2-)</li>
+                        <li>Fosfatos (PO4³-)</li>
+                        <li>Fluoruros (F-)</li>
+                        <li>Cloro Residual Libre</li>
+                        <li>Oxígeno Disuelto (OD)</li>
+                        <li>DBO5</li>
+                        <li>DQO</li>
+                        <li>Aceites y Grasas</li>
+                    </ul>
+                </div>
+
+                <div class="parameter-category">
+                    <h3><i class="fas fa-atom"></i> Metales Pesados</h3>
+                    <ul class="parameter-list">
+                        <li>Arsénico (As)</li>
+                        <li>Plomo (Pb)</li>
+                        <li>Cadmio (Cd)</li>
+                        <li>Mercurio (Hg)</li>
+                        <li>Cromo Total (Cr)</li>
+                        <li>Cobre (Cu)</li>
+                        <li>Zinc (Zn)</li>
+                        <li>Hierro (Fe)</li>
+                        <li>Manganeso (Mn)</li>
+                        <li>Aluminio (Al)</li>
+                        <li>Níquel (Ni)</li>
+                        <li>Selenio (Se)</li>
+                    </ul>
+                </div>
+
+                <div class="parameter-category">
+                    <h3><i class="fas fa-bacteria"></i> Parámetros Microbiológicos</h3>
+                    <ul class="parameter-list">
+                        <li>Coliformes Totales</li>
+                        <li>Coliformes Termotolerantes</li>
+                        <li>Escherichia coli</li>
+                        <li>Bacterias Heterotróficas</li>
+                        <li>Enterococos Fecales</li>
+                        <li>Pseudomonas aeruginosa</li>
+                        <li>Huevos de Helmintos</li>
+                        <li>Parásitos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section" id="contact-section">
+        <div class="container">
+            <div class="cta-card water-cta">
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <i class="fas fa-certificate"></i> Laboratorio Acreditado
+                    </div>
+                    <h2>¿Necesita analizar la calidad de su agua?</h2>
+                    <p>Solicite una cotización personalizada. Nuestro equipo de químicos le brindará asesoría técnica
+                        sobre los parámetros necesarios para su caso.</p>
+
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Asesoría técnica gratuita</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resultados en 48-72 horas</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Toma de muestras en campo</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Informe con interpretación</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="index.html#cotizacion" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+51921593127" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Consulta Directa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-image">
+                    <img src="imagenes/muestra2.jpeg" alt="Toma de muestras de agua" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes sobre Análisis de Agua</h2>
+                <p>Resolvemos las dudas más comunes sobre nuestros servicios de análisis</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cómo debo tomar la muestra de agua?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para análisis microbiológicos: Use frascos estériles proporcionados por el laboratorio. Deje
+                            correr el agua 2-3 minutos antes de tomar la muestra. Para análisis fisicoquímicos: Use
+                            frascos de plástico o vidrio limpios. Para metales: Preserve con ácido nítrico. Podemos
+                            realizar la toma de muestras en campo con cadena de custodia.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánta cantidad de muestra necesitan?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Depende del tipo de análisis: Análisis básico (pH, CE, turbidez): 500 mL. Análisis
+                            fisicoquímico completo: 2 litros. Análisis microbiológico: 250-500 mL en frasco estéril.
+                            Metales pesados: 500 mL preservado con ácido. Le proporcionaremos los frascos adecuados con
+                            instrucciones detalladas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Realizan toma de muestras en campo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicio de muestreo en campo con personal técnico capacitado. Garantizamos la
+                            cadena de custodia, condiciones de transporte y preservación adecuadas. Este servicio tiene
+                            un costo adicional dependiendo de la ubicación y el número de puntos de muestreo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué normativa aplica para agua potable?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>En Perú, el agua para consumo humano debe cumplir con el Reglamento de Calidad del Agua para
+                            Consumo Humano (DS 031-2010-SA) y la Directiva Sanitaria de DIGESA. Nuestro informe incluye
+                            la comparación con los límites máximos permisibles y recomendaciones si algún parámetro
+                            excede los valores.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto tiempo son válidos los resultados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los resultados representan las condiciones del agua al momento del muestreo. Para monitoreos
+                            reguladores, se recomienda: Agua potable: análisis mensual o trimestral. Aguas residuales:
+                            según frecuencia establecida en el instrumento de gestión ambiental. Aguas superficiales:
+                            monitoreo estacional (cada 3 meses).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo GEODINA">
+                        <div class="logo-text">
+                            <h3>GEODINA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Laboratorio especializado en análisis de agua con equipos modernos y
+                        personal altamente calificado.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" style="display:none"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="display:none"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="display:none"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios Relacionados</h4>
+                    <ul class="footer-links">
+                        <li><a href="calidad-aire.html">Calidad del Aire</a></li>
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="refraccion-sismica.html">Refracción Sísmica</a></li>
+                        <li><a href="perforacion-diamantina.html">Perforación Diamantina</a></li>
+                        <li><a href="batimetria.html">Batimetría</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+51921593127">+51 921 593 127</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:GEODINAlab@gmail.com">GEODINAlab@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Vie: 8:00 AM - 7:00 PM<br>Sáb: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Acreditaciones</h4>
+                    <div class="certifications-grid" style="gap: 0.5rem;">
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-award"></i>
+                            <h4 style="font-size: 0.75rem;">APHA</h4>
+                        </div>
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 style="font-size: 0.75rem;">EPA</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio GEODINA. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    <a href="index.html">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Análisis%20de%20Agua"
+            class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp sobre Análisis de Agua">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Consulta sobre Agua</span>
+        </a>
+        <a href="#" class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

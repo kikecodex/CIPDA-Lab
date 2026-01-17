@@ -7,26 +7,26 @@
     --danger-color: #e74c3c;
     --warning-color: #f39c12;
     --success-color: #27ae60;
-    
+
     /* Colores neutros */
     --dark-color: #2c3e50;
     --light-color: #f8f9fa;
     --gray-light: #ecf0f1;
     --gray-medium: #bdc3c7;
     --gray-dark: #7f8c8d;
-    
+
     /* Sombras */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.15);
-    --shadow-xl: 0 12px 36px rgba(0,0,0,0.2);
-    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 12px 36px rgba(0, 0, 0, 0.2);
+
     /* Bordes */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 16px;
     --radius-xl: 24px;
-    
+
     /* Espaciado */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
@@ -34,7 +34,7 @@
     --space-lg: 2rem;
     --space-xl: 3rem;
     --space-xxl: 5rem;
-    
+
     /* Tipografía */
     --font-main: 'Poppins', sans-serif;
     --font-size-xs: 0.75rem;
@@ -44,7 +44,7 @@
     --font-size-xl: 1.5rem;
     --font-size-xxl: 2rem;
     --font-size-xxxl: 3rem;
-    
+
     /* Transiciones */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -77,18 +77,40 @@ body {
 }
 
 /* ===== TIPOGRAFÍA ===== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: var(--space-sm);
 }
 
-h1 { font-size: var(--font-size-xxxl); }
-h2 { font-size: var(--font-size-xxl); }
-h3 { font-size: var(--font-size-xl); }
-h4 { font-size: var(--font-size-lg); }
-h5 { font-size: var(--font-size-md); }
-h6 { font-size: var(--font-size-sm); }
+h1 {
+    font-size: var(--font-size-xxxl);
+}
+
+h2 {
+    font-size: var(--font-size-xxl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+}
+
+h5 {
+    font-size: var(--font-size-md);
+}
+
+h6 {
+    font-size: var(--font-size-sm);
+}
 
 p {
     margin-bottom: var(--space-sm);
@@ -104,9 +126,17 @@ a:hover {
     color: var(--primary-color);
 }
 
-.text-center { text-align: center; }
-.text-right { text-align: right; }
-.text-left { text-align: left; }
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
 
 /* ===== BOTONES ===== */
 .btn {
@@ -150,6 +180,7 @@ a:hover {
         transform: scale(0, 0);
         opacity: 0.5;
     }
+
     100% {
         transform: scale(20, 20);
         opacity: 0;
@@ -512,9 +543,22 @@ a:hover {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-10px); }
-    60% { transform: translateX(-50%) translateY(-5px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 /* ===== CLIENTES ===== */
@@ -712,7 +756,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     padding: var(--space-lg);
     color: white;
     transform: translateY(100%);
@@ -883,7 +927,7 @@ a:hover {
     border-color: var(--gray-medium);
 }
 
-.service-option input[type="checkbox"]:checked + label {
+.service-option input[type="checkbox"]:checked+label {
     background: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
@@ -1478,6 +1522,7 @@ a:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1501,11 +1546,11 @@ a:hover {
         --space-xl: 2rem;
         --space-lg: 1.5rem;
     }
-    
+
     .hero-title {
         font-size: clamp(1.8rem, 4vw, 2.5rem);
     }
-    
+
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -1523,65 +1568,65 @@ a:hover {
         padding: var(--space-md);
         box-shadow: var(--shadow-md);
     }
-    
+
     .nav-right.active {
         display: flex;
     }
-    
+
     .nav-menu {
         flex-direction: column;
         width: 100%;
     }
-    
+
     .header-contact {
         width: 100%;
         justify-content: center;
     }
-    
+
     .mobile-toggle {
         display: flex;
     }
-    
+
     .mobile-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
     }
-    
+
     .mobile-toggle.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .mobile-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
-    
+
     .carousel-controls {
         display: none;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .step-actions {
         flex-direction: column;
         gap: var(--space-md);
     }
-    
+
     .summary-actions {
         flex-direction: column;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-legal {
         justify-content: center;
     }
@@ -1592,30 +1637,30 @@ a:hover {
         --space-xl: 1.5rem;
         --space-lg: 1rem;
     }
-    
+
     .hero {
         min-height: 500px;
     }
-    
+
     .hero-content {
         padding-top: var(--space-xl);
     }
-    
+
     .services-grid,
     .clients-grid,
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .floating-buttons {
         bottom: var(--space-md);
         right: var(--space-md);
     }
-    
+
     .whatsapp-float,
     .phone-float,
     .scroll-top {
@@ -1623,7 +1668,7 @@ a:hover {
         height: 50px;
         font-size: 1.25rem;
     }
-    
+
     .tooltip {
         display: none;
     }
@@ -1631,6 +1676,7 @@ a:hover {
 
 /* ===== IMPRESIÓN ===== */
 @media print {
+
     .header,
     .hero-buttons,
     .carousel-controls,
@@ -1642,21 +1688,22 @@ a:hover {
     .btn-whatsapp {
         display: none !important;
     }
-    
+
     .section {
         padding: 1rem 0 !important;
     }
-    
+
     .hero {
         height: auto !important;
         margin-top: 0 !important;
     }
-    
+
     .hero-slide {
         position: relative !important;
         height: 300px !important;
     }
 }
+
 /* ===== ESTILOS ESPECÍFICOS PARA PÁGINA DE SERVICIO ===== */
 
 /* Hero section específico para páginas de servicio */
@@ -1851,7 +1898,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: white;
     padding: var(--space-md);
     font-size: var(--font-size-sm);
@@ -1873,7 +1920,8 @@ a:hover {
     transition: all var(--transition-fast);
 }
 
-.thumb:hover, .thumb.active {
+.thumb:hover,
+.thumb.active {
     border-color: var(--secondary-color);
 }
 
@@ -2359,30 +2407,31 @@ a:hover {
         height: 70vh;
         min-height: 500px;
     }
-    
+
     .hero-stats {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .stat-number {
         font-size: 2rem;
     }
-    
+
     .process-timeline::before {
         left: 20px;
     }
-    
+
     .step-number {
         width: 40px;
         height: 40px;
         font-size: 1.25rem;
     }
-    
+
     .step-details {
         flex-direction: column;
         gap: 0.5rem;
     }
 }
+
 /* ===== ESTILOS ESPECÍFICOS PARA PÁGINA DE REFRACCIÓN SÍSMICA ===== */
 
 /* Hero section específico para refracción sísmica */
@@ -2397,7 +2446,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 80%, rgba(52, 152, 219, 0.1) 2px, transparent 2px),
         radial-gradient(circle at 40% 20%, rgba(26, 188, 156, 0.1) 2px, transparent 2px),
         radial-gradient(circle at 80% 50%, rgba(155, 89, 182, 0.1) 2px, transparent 2px);
@@ -2443,6 +2492,7 @@ a:hover {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -2890,26 +2940,26 @@ a:hover {
     .seismic-pattern {
         opacity: 0.3;
     }
-    
+
     .wave-animation {
         height: 50px;
     }
-    
+
     .wave {
         height: 50px;
     }
-    
+
     .methodology-step {
         flex-direction: column;
         gap: var(--space-md);
     }
-    
+
     .step-visual {
         flex-direction: row;
         align-items: center;
         gap: var(--space-md);
     }
-    
+
     .step-connector {
         width: 100%;
         height: 2px;
@@ -2917,31 +2967,32 @@ a:hover {
         left: 60px;
         background: linear-gradient(to right, var(--secondary-color), transparent);
     }
-    
+
     .table-header,
     .table-row {
         grid-template-columns: 1fr;
         display: block;
     }
-    
+
     .table-cell {
         display: block;
         border-right: none;
         border-bottom: 1px solid var(--gray-light);
         text-align: left;
     }
-    
+
     .table-cell.active::after {
         left: auto;
         right: var(--space-md);
         transform: none;
     }
-    
+
     .table-row .table-cell:first-child {
         background: var(--gray-light);
         font-weight: 600;
     }
 }
+
 /* ===== ESTILOS ESPECÍFICOS PARA PÁGINA DE BATIMETRÍA ===== */
 
 /* Hero section específico para batimetría */
@@ -2990,6 +3041,7 @@ a:hover {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -3277,23 +3329,23 @@ a:hover {
     .water-effect {
         opacity: 0.5;
     }
-    
+
     .water-wave {
         height: 60px;
     }
-    
+
     .depth-indicator {
         display: none;
     }
-    
+
     .types-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .technology-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -3303,9 +3355,171 @@ a:hover {
     .technology-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .project-details {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+/* ===== ESTILOS PARA PÁGINA DE ANÁLISIS DE AGUA ===== */
+.water-hero .hero-background {
+    background-size: cover;
+    background-position: center;
+}
+
+.water-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rise 15s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+    width: 25px;
+    height: 25px;
+    left: 70%;
+    animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+    width: 30px;
+    height: 30px;
+    left: 90%;
+    animation-delay: 8s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        bottom: 100%;
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+
+.water-cta {
+    background: linear-gradient(135deg, #0077b6, #00a8e8);
+}
+
+/* Parameters Grid for Water Analysis */
+.parameters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.parameter-category {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.parameter-category h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--gray-light);
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.parameter-list {
+    list-style: none;
+    padding: 0;
+}
+
+.parameter-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--gray-light);
+    color: var(--dark-color);
+    font-size: var(--font-size-sm);
+}
+
+.parameter-list li:last-child {
+    border-bottom: none;
+}
+
+/* ===== ESTILOS PARA PÁGINA DE CALIDAD DEL AIRE ===== */
+.air-hero .hero-background {
+    background-size: cover;
+    background-position: center;
+}
+
+.air-cta {
+    background: linear-gradient(135deg, #2e86ab, #225560);
+}
+
+/* ===== ESTILOS PARA PÁGINA MASW ===== */
+.masw-hero .hero-background {
+    background-size: cover;
+    background-position: center;
+}
+
+.masw-cta {
+    background: linear-gradient(135deg, #2e4053, #1c2833);
+}
+
+/* ===== ESTILOS PARA PÁGINA SPT ===== */
+.spt-hero .hero-background {
+    background-size: cover;
+    background-position: center;
+}
+
+.spt-cta {
+    background: linear-gradient(135deg, #554236, #332820);
+}
+
+/* ===== ESTILOS PARA PÁGINA DE CONCRETO ===== */
+.concrete-hero .hero-background {
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== ESTILOS PARA PÁGINA DE COMPACTACIÓN ===== */
+.compaction-hero .hero-background {
+    background-size: cover;
+    background-position: center;
 }

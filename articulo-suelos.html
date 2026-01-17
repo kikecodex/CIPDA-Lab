@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Artículo sobre la importancia de la mecánica de suelos en proyectos de construcción.">
-    <title>Importancia del Estudio de Suelos - Blog CIPDA</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+        content="Artículo sobre la importancia de la mecánica de suelos en proyectos de construcción. Laboratorio GEODINA.">
+    <meta name="keywords"
+        content="mecánica de suelos, estudio de suelos, geotecnia, construcción, cimentación, GEODINA">
+    <title>Importancia del Estudio de Suelos - Blog GEODINA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="./styles.css?v=3">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
         .article-hero {
             height: 50vh;
             min-height: 400px;
             position: relative;
-            background: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.5)), url('imagenes/blog_1.png') center/cover;
+            background: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.5)), url('imagenes/Analisis_granulometrico.jpeg') center/cover;
             display: flex;
             align-items: flex-end;
             color: white;
@@ -66,6 +72,15 @@
             margin-bottom: 1.5rem;
         }
 
+        .article-text ul {
+            margin-bottom: 1.5rem;
+            padding-left: 20px;
+        }
+
+        .article-text li {
+            margin-bottom: 0.5rem;
+        }
+
         @media (max-width: 768px) {
             .article-content {
                 margin: 0;
@@ -77,24 +92,34 @@
 </head>
 
 <body>
-    <!-- HEADER -->
+    <!-- HEADER MODERNO -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">
-                <a href="index.html"
-                    style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
-                    <img src="imagenes/LOGO.png" alt="Logo Laboratorio">
-                    <span>Lab CIPDA</span>
-                </a>
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio GEODINA">
+                <div class="logo-text">
+                    <h1>GEODINA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="index.html#cotizacion" class="nav-link">Cotización</a></li>
-                <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link">Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link">Cotización</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -116,8 +141,8 @@
             <article class="article-content fade-in">
                 <div class="article-meta">
                     <span class="article-tag">Geotecnia</span>
-                    <span>📅 12 Diciembre, 2025</span>
-                    <span>✍️ Ing. Civil CIPDA</span>
+                    <span><i class="fas fa-calendar-alt"></i> 12 Diciembre, 2025</span>
+                    <span><i class="fas fa-user"></i> Ing. Civil GEODINA</span>
                 </div>
 
                 <div class="article-text">
@@ -135,7 +160,7 @@
                         deformaciones peligrosas.
                     </p>
 
-                    <img src="imagenes/hero_3.png" alt="Trabajo de campo"
+                    <img src="imagenes/topo.jpg" alt="Estudio de suelos en campo"
                         style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
 
                     <h2>Riesgos de construir sin estudio</h2>
@@ -143,24 +168,28 @@
                         Construir sin conocer el suelo es como navegar sin brújula. Los principales riesgos incluyen:
                     </p>
                     <ul>
-                        <li><strong>Asentamientos diferenciales:</strong> Hundimientos desiguales de la edificación que
+                        <li><i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i>
+                            <strong>Asentamientos diferenciales:</strong> Hundimientos desiguales de la edificación que
                             provocan grietas severas.</li>
-                        <li><strong>Colapso de estructuras:</strong> En casos extremos, el suelo puede fallar
+                        <li><i class="fas fa-exclamation-triangle" style="color: var(--warning-color);"></i>
+                            <strong>Colapso de estructuras:</strong> En casos extremos, el suelo puede fallar
                             repentinamente.</li>
-                        <li><strong>Sobrecostos:</strong> Diseñar cimentaciones "por si acaso" puede ser mucho más
+                        <li><i class="fas fa-money-bill-wave" style="color: var(--success-color);"></i>
+                            <strong>Sobrecostos:</strong> Diseñar cimentaciones "por si acaso" puede ser mucho más
                             costoso que hacer el diseño óptimo basado en datos reales.</li>
                     </ul>
 
                     <h2>Nuestra Metodología</h2>
                     <p>
-                        En Laboratorio CIPDA seguimos rigurosos estándares internacionales (ASTM) y normativas
+                        En Laboratorio GEODINA seguimos rigurosos estándares internacionales (ASTM) y normativas
                         nacionales. Realizamos sondeos, calicatas, ensayos de penetración estándar (SPT) y pruebas de
                         laboratorio completas (granulometría, límites, triaxiales) para entregarle un informe detallado
                         con recomendaciones claras de cimentación.
                     </p>
 
-                    <div class="service-cta-block">
-                        <h3>¿Tiene un proyecto en mente?</h3>
+                    <div class="service-cta-block"
+                        style="background: var(--color-bg-light); padding: 2rem; border-radius: var(--radius-md); text-align: center; margin-top: 2rem;">
+                        <h3 style="color: var(--color-primary);">¿Tiene un proyecto en mente?</h3>
                         <p>No arriesgue su inversión. Solicite una cotización para su estudio de suelos con nosotros.
                         </p>
                         <a href="index.html#cotizacion" class="btn btn-primary">Solicitar Cotización</a>
@@ -169,44 +198,101 @@
 
                 <hr style="border: 0; border-top: 1px solid #ddd; margin: 3rem 0;">
 
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <a href="blog.html" class="btn btn-outline">← Volver al Blog</a>
-                    <div style="display: flex; gap: 10px;">
-                        <span>Compartir:</span>
-                        <a href="#" style="text-decoration: none;">📘</a>
-                        <a href="#" style="text-decoration: none;">💼</a>
-                        <a href="#" style="text-decoration: none;">📧</a>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <a href="blog.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver al Blog</a>
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <span style="font-weight: 500;">Compartir:</span>
+                        <a href="#" style="text-decoration: none; color: #3b5998; font-size: 1.2rem;"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" style="text-decoration: none; color: #0077b5; font-size: 1.2rem;"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" style="text-decoration: none; color: #25d366; font-size: 1.2rem;"><i
+                                class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </article>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER MEJORADO -->
     <footer class="footer" id="contacto">
         <div class="container">
             <div class="footer-content">
-                <div>
-                    <h4>Laboratorio CIPDA</h4>
-                    <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo GEODINA">
+                        <div class="logo-text">
+                            <h3>GEODINA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Laboratorio especializado en mecánica de suelos, análisis de agua y
+                        calidad del aire con más de 10 años de experiencia.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" style="display:none"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="display:none"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="display:none"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-                <div>
+
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="index.html#servicios">Refracción Sísmica</a></li>
+                        <li><a href="index.html#servicios">Perforación Diamantina</a></li>
+                        <li><a href="index.html#servicios">Batimetría</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
                     <h4>Contacto</h4>
-                    <p>📧cipdalab@gmail.com</p>
-                    <p>📱 921593127</p>
-                </div>
-                <div>
-                    <h4>Enlaces</h4>
-                    <p><a href="index.html">Inicio</a></p>
-                    <p><a href="blog.html">Blog</a></p>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+51921593127">+51 921 593 127</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:GEODINAlab@gmail.com">GEODINAlab@gmail.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Laboratorio CIPDA.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio GEODINA. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="script.js?v=2"></script>
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127" class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Chatea con nosotros</span>
+        </a>
+        <a href="tel:+51921593127" class="phone-float" aria-label="Llamar por teléfono">
+            <i class="fas fa-phone"></i>
+            <span class="tooltip">Llámanos</span>
+        </a>
+        <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+            <span class="tooltip">Volver arriba</span>
+        </button>
+    </div>
+
+    <script src="./script.js?v=3"></script>
 </body>
 
 </html>

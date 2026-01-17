@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Estudio MASW - Análisis Multicanal de Ondas Superficiales. Determinación de Vs30 para clasificación sísmica del suelo según E.030.">
+    <meta name="keywords"
+        content="MASW, Vs30, ondas superficiales, clasificación sísmica, E.030, geofísica, diseño sísmico, Huaraz">
+    <meta name="author" content="Laboratorio GEODINA">
+    <title>MASW - Vs30 | GEODINA Lab - Clasificación Sísmica del Suelo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio GEODINA">
+                <div class="logo-text">
+                    <h1>GEODINA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+                            Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="service-hero masw-hero">
+        <div class="hero-background"
+            style="background-image: linear-gradient(rgba(46, 64, 83, 0.85), rgba(28, 40, 51, 0.9)), url('imagenes/refraccion_sismica.jpeg');">
+        </div>
+
+        <div class="seismic-pattern"></div>
+
+        <div class="container hero-content">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="current">MASW - Vs30</span>
+            </nav>
+
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-wave-square"></i> Método Geofísico Avanzado
+                </div>
+                <h1 class="hero-title">Estudio <span class="highlight">MASW</span></h1>
+                <p class="hero-subtitle">Análisis Multicanal de Ondas Superficiales para clasificación sísmica del suelo
+                    y determinación de Vs30</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">Vs30</span>
+                        <span class="stat-label">Velocidad de corte</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">E.030</span>
+                        <span class="stat-label">Norma Sísmica</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30m</span>
+                        <span class="stat-label">Profundidad mínima</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">S0-S4</span>
+                        <span class="stat-label">Clasificación de suelos</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Solicitar Estudio
+                    </a>
+                    <a href="#clasificacion" class="btn btn-outline">
+                        <i class="fas fa-layer-group"></i> Ver Clasificación
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="wave-animation">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué es el Estudio MASW?</h2>
+                <p>Método geofísico no invasivo para determinar el perfil de velocidades de ondas de corte (Vs) del
+                    subsuelo</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-main">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-wave-square"></i>
+                            <h3>Análisis Multicanal de Ondas Superficiales</h3>
+                        </div>
+                        <p>El MASW (Multichannel Analysis of Surface Waves) es un método geofísico que analiza la
+                            propagación de ondas Rayleigh para determinar el perfil de velocidades de ondas de corte
+                            (Vs) del subsuelo. El parámetro <strong>Vs30</strong> (velocidad promedio en los primeros 30
+                            metros) es fundamental para la clasificación sísmica del suelo según la Norma E.030.</p>
+
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h4>Perfil de Velocidad Vs</h4>
+                                    <p>Determinación del perfil de velocidades de ondas de corte con la profundidad</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-layer-group"></i>
+                                <div>
+                                    <h4>Clasificación Sísmica del Suelo</h4>
+                                    <p>Tipos de suelo S0, S1, S2, S3 y S4 según norma E.030</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-calculator"></i>
+                                <div>
+                                    <h4>Módulos Elásticos Dinámicos</h4>
+                                    <p>Cálculo de G, E dinámico y coeficiente de Poisson</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <h4>Período Predominante del Suelo</h4>
+                                    <p>Ts para análisis de resonancia suelo-estructura</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img src="imagenes/refraccion_sismica.jpeg" alt="Estudio MASW en campo" loading="lazy">
+                            <div class="image-caption">Adquisición de datos MASW para determinación de Vs30</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clipboard-check"></i> Normativa Aplicable</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Norma E.030</span>
+                                    <span class="spec-value">Diseño Sismorresistente (RNE)</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ASTM D4428</span>
+                                    <span class="spec-value">Crosshole Seismic Testing</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ASCE 7-16</span>
+                                    <span class="spec-value">Site Classification</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">Eurocode 8</span>
+                                    <span class="spec-value">Seismic Hazard</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-info-circle"></i> ¿Por qué es obligatorio?</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray-dark);">La Norma E.030 requiere la clasificación
+                            del suelo para determinar el factor de amplificación sísmica (S) y el período del suelo (Tp,
+                            Tl). Esto es obligatorio para:</p>
+                        <ul class="documents-list">
+                            <li><i class="fas fa-building"></i> Edificaciones mayores a 3 pisos</li>
+                            <li><i class="fas fa-hospital"></i> Edificaciones esenciales</li>
+                            <li><i class="fas fa-industry"></i> Estructuras industriales</li>
+                            <li><i class="fas fa-road"></i> Puentes y viaductos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLASIFICACIÓN SÍSMICA -->
+    <section class="section applications-section" id="clasificacion">
+        <div class="container">
+            <div class="section-header">
+                <h2>Clasificación Sísmica del Suelo</h2>
+                <p>Tipos de suelo según la Norma E.030 basados en el valor de Vs30</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="table-cell">Tipo de Suelo</div>
+                    <div class="table-cell">Vs30 (m/s)</div>
+                    <div class="table-cell">Descripción</div>
+                    <div class="table-cell">Factor S</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell"><strong>S0 - Roca Dura</strong></div>
+                    <div class="table-cell active">> 1500 m/s</div>
+                    <div class="table-cell">Roca sana, sin meteorización</div>
+                    <div class="table-cell">0.80</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell"><strong>S1 - Roca o Suelo Muy Rígido</strong></div>
+                    <div class="table-cell active">500 - 1500 m/s</div>
+                    <div class="table-cell">Roca fracturada, grava densa, suelo muy rígido</div>
+                    <div class="table-cell">1.00</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell"><strong>S2 - Suelo Intermedio</strong></div>
+                    <div class="table-cell active">180 - 500 m/s</div>
+                    <div class="table-cell">Arena densa, grava, arcilla rígida</div>
+                    <div class="table-cell">1.05 - 1.15</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell"><strong>S3 - Suelo Blando</strong></div>
+                    <div class="table-cell active">
+                        < 180 m/s</div>
+                            <div class="table-cell">Arena suelta, arcilla media a blanda</div>
+                            <div class="table-cell">1.10 - 1.20</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell"><strong>S4 - Condiciones Especiales</strong></div>
+                        <div class="table-cell active">Estudio específico</div>
+                        <div class="table-cell">Suelos muy blandos, licuables, orgánicos</div>
+                        <div class="table-cell">Estudio especial</div>
+                    </div>
+                </div>
+
+                <div class="comparison-conclusion">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Importante</h3>
+                    <p>La clasificación errónea del suelo puede resultar en un diseño sísmico inadecuado, comprometiendo
+                        la seguridad de la estructura. El estudio MASW proporciona una determinación objetiva basada en
+                        mediciones reales.</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- METODOLOGÍA -->
+    <section class="section methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Metodología del Estudio MASW</h2>
+                <p>Proceso técnico para la determinación de Vs30</p>
+            </div>
+
+            <div class="methodology-timeline">
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number">1</div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-ruler-horizontal"></i> Diseño del Arreglo</h3>
+                        <p>Configuración del tendido de geófonos según la profundidad objetivo. Para Vs30 se requiere un
+                            arreglo mínimo de 30-50 metros.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-microphone-alt"></i> 24-48 geófonos</span>
+                            <span><i class="fas fa-ruler"></i> Espaciamiento 1-2 m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number">2</div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-bolt"></i> Adquisición de Datos</h3>
+                        <p>Generación de ondas superficiales mediante impactos de martillo y registro de los sismogramas
+                            en cada geófono.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-hammer"></i> Fuente sísmica</span>
+                            <span><i class="fas fa-wave-square"></i> Ondas Rayleigh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number">3</div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-chart-area"></i> Análisis de Dispersión</h3>
+                        <p>Transformación al dominio frecuencia-velocidad de fase para extraer la curva de dispersión de
+                            ondas Rayleigh.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-project-diagram"></i> Transformada f-k</span>
+                            <span><i class="fas fa-chart-line"></i> Curva de dispersión</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number">4</div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-layer-group"></i> Inversión y Modelado</h3>
+                        <p>Inversión de la curva de dispersión para obtener el perfil de velocidades Vs con la
+                            profundidad.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-sync-alt"></i> Inversión iterativa</span>
+                            <span><i class="fas fa-stream"></i> Perfil 1D de Vs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-step">
+                    <div class="step-visual">
+                        <div class="step-number">5</div>
+                    </div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-calculator"></i> Cálculo de Vs30</h3>
+                        <p>Determinación del Vs30 como promedio ponderado de la velocidad en los primeros 30 metros y
+                            clasificación según E.030.</p>
+                        <div class="step-details">
+                            <span><i class="fas fa-formula"></i> Vs30 = 30 / S(hi/Vsi)</span>
+                            <span><i class="fas fa-tags"></i> Clasificación S0-S4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTAJAS -->
+    <section class="section applications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ventajas del MASW</h2>
+                <p>Comparación con otros métodos de determinación de Vs</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>No Invasivo</h3>
+                    <p>No requiere perforaciones ni excavaciones, minimizando el impacto en el terreno y reduciendo
+                        costos.</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Rápido y Eficiente</h3>
+                    <p>Adquisición de datos en 2-3 horas por punto. Resultados disponibles en 24-48 horas.</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Costo-Efectivo</h3>
+                    <p>Significativamente más económico que métodos invasivos como Downhole o Crosshole.</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Alta Precisión</h3>
+                    <p>Resultados comparables con métodos directos de medición de ondas de corte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section" id="contact-section">
+        <div class="container">
+            <div class="cta-card masw-cta">
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <i class="fas fa-certificate"></i> Cumplimiento E.030
+                    </div>
+                    <h2>¿Necesita un estudio MASW para su proyecto?</h2>
+                    <p>Obtenga la clasificación sísmica del suelo requerida por la Norma E.030 con un estudio
+                        profesional y resultados confiables.</p>
+
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Determinación de Vs30</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Clasificación S0-S4</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Módulos elásticos dinámicos</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Período predominante Ts</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="index.html#cotizacion" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+51921593127" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Consulta Técnica
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-image">
+                    <img src="imagenes/topo.jpg" alt="Estudio geofísico" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes sobre MASW</h2>
+                <p>Información importante sobre el estudio de velocidades de ondas de corte</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuándo es obligatorio realizar un estudio MASW o Vs30?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Según la Norma E.030, la clasificación del perfil de suelo es obligatoria para proyectos de
+                            edificaciones de más de 3 pisos, edificaciones esenciales (hospitales, estaciones de
+                            bomberos), estructuras que almacenen materiales peligrosos, puentes, y en general cualquier
+                            estructura que requiera análisis sísmico detallado. Sin un estudio de Vs30, se debe asumir
+                            el tipo de suelo más desfavorable (S3 o S4), lo que encarece el diseño estructural.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuántos puntos de MASW necesito para mi proyecto?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Depende del tamaño y características del proyecto: Para edificaciones aisladas: 1-2 puntos.
+                            Para conjuntos habitacionales o proyectos extensos: 1 punto cada 2,000-5,000 m² o según
+                            variabilidad del terreno. Para proyectos lineales (carreteras, tuberías): cada 500-1000 m o
+                            en cambios geológicos significativos. Se recomienda combinar con información geológica y de
+                            sondeos existentes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuál es la diferencia entre MASW y Refracción Sísmica?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La Refracción Sísmica mide velocidades de ondas P (compresionales) y se usa principalmente
+                            para determinar estratigrafía, profundidad de roca y espesores de capas. El MASW mide
+                            velocidades de ondas S (corte) que son directamente aplicables a la clasificación sísmica y
+                            cálculo de parámetros dinámicos del suelo. Ambos métodos son complementarios y a menudo se
+                            realizan juntos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Hasta qué profundidad puede investigar el MASW?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La profundidad de investigación depende de la longitud del arreglo y la fuente sísmica
+                            utilizada. Con arreglos de 50-100 metros y fuentes activas (martillo), se pueden alcanzar
+                            profundidades de 30-50 metros, suficiente para el cálculo de Vs30. Para mayores
+                            profundidades (hasta 100+ metros), se pueden usar fuentes pasivas (microtremores, ruido
+                            ambiental) como el método SPAC o H/V.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué información incluye el informe del estudio MASW?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El informe incluye: 1) Curvas de dispersión experimentales y teóricas, 2) Perfil 1D de
+                            velocidad Vs con la profundidad, 3) Valor de Vs30 calculado, 4) Clasificación del suelo
+                            según E.030, 5) Período predominante del suelo (Ts), 6) Módulos dinámicos (G, E dinámico),
+                            7) Factores de sitio (S, Tp, Tl) para el diseño sísmico, 8) Comparación con normativas
+                            internacionales (ASCE 7, Eurocode 8).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo GEODINA">
+                        <div class="logo-text">
+                            <h3>GEODINA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Especialistas en estudios geofísicos y clasificación sísmica del suelo
+                        para proyectos de ingeniería.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" style="display:none"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="display:none"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="display:none"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios Relacionados</h4>
+                    <ul class="footer-links">
+                        <li><a href="refraccion-sismica.html">Refracción Sísmica</a></li>
+                        <li><a href="ensayos-spt.html">Ensayos SPT</a></li>
+                        <li><a href="perforacion-diamantina.html">Perforación Diamantina</a></li>
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="batimetria.html">Batimetría</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+51921593127">+51 921 593 127</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:GEODINAlab@gmail.com">GEODINAlab@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Normativas</h4>
+                    <div class="certifications-grid" style="gap: 0.5rem;">
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-file-alt"></i>
+                            <h4 style="font-size: 0.75rem;">E.030</h4>
+                        </div>
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 style="font-size: 0.75rem;">ASTM</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio GEODINA. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    <a href="index.html">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Estudio%20MASW%20-%20Vs30"
+            class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp sobre MASW">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Consulta sobre MASW</span>
+        </a>
+        <a href="#" class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

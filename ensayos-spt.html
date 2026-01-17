@@ -1,0 +1,612 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ensayo SPT - Standard Penetration Test. Determinación de capacidad portante del suelo, correlaciones geotécnicas. ASTM D1586.">
+    <meta name="keywords"
+        content="SPT, ensayo penetración estándar, capacidad portante, N de golpes, geotecnia, cimentaciones, Huaraz">
+    <meta name="author" content="Laboratorio GEODINA">
+    <title>Ensayo SPT | GEODINA Lab - Exploración Geotécnica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio GEODINA">
+                <div class="logo-text">
+                    <h1>GEODINA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+                            Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="service-hero spt-hero">
+        <div class="hero-background"
+            style="background-image: linear-gradient(rgba(85, 66, 54, 0.85), rgba(51, 40, 32, 0.9)), url('imagenes/diamantina4.jpeg');">
+        </div>
+
+        <div class="container hero-content">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="current">Ensayo SPT</span>
+            </nav>
+
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-hammer"></i> Ensayo In Situ Normalizado
+                </div>
+                <h1 class="hero-title">Ensayo <span class="highlight">SPT</span></h1>
+                <p class="hero-subtitle">Standard Penetration Test - El ensayo más utilizado en exploración geotécnica
+                    para determinar la resistencia del suelo</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">N</span>
+                        <span class="stat-label">Número de golpes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">63.5 kg</span>
+                        <span class="stat-label">Peso del martillo</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">76 cm</span>
+                        <span class="stat-label">Altura de caída</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">ASTM</span>
+                        <span class="stat-label">D1586 / D6066</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Solicitar Ensayo
+                    </a>
+                    <a href="#correlaciones" class="btn btn-outline">
+                        <i class="fas fa-table"></i> Ver Correlaciones
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué es el Ensayo SPT?</h2>
+                <p>El ensayo de penetración estándar es el método de exploración geotécnica más utilizado a nivel
+                    mundial</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-main">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-hammer"></i>
+                            <h3>Standard Penetration Test (SPT)</h3>
+                        </div>
+                        <p>El SPT es un ensayo in situ que consiste en hincar un muestreador normalizado (cuchara
+                            partida) mediante golpes de un martillo de 63.5 kg que cae libremente desde 76 cm de altura.
+                            Se contabiliza el número de golpes necesarios para penetrar 30 cm, obteniendo el valor
+                            <strong>N</strong>, que se correlaciona con propiedades mecánicas del suelo.</p>
+
+                        <div class="feature-list">
+                            <div class="feature">
+                                <i class="fas fa-chart-bar"></i>
+                                <div>
+                                    <h4>Resistencia del Suelo (N)</h4>
+                                    <p>Número de golpes para penetrar 30 cm, indicador de la compacidad del suelo</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <h4>Capacidad Portante</h4>
+                                    <p>Estimación de la capacidad de carga admisible para diseño de cimentaciones</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-vial"></i>
+                                <div>
+                                    <h4>Muestreo Continuo</h4>
+                                    <p>Obtención de muestras alteradas para clasificación y ensayos de laboratorio</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-layer-group"></i>
+                                <div>
+                                    <h4>Perfil Estratigráfico</h4>
+                                    <p>Identificación de capas de suelo y variación de propiedades con la profundidad
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-gallery">
+                        <div class="main-image">
+                            <img src="imagenes/diamantina4.jpeg" alt="Ensayo SPT en campo" loading="lazy">
+                            <div class="image-caption">Ejecución de ensayo SPT con equipo de perforación</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clipboard-check"></i> Normas Aplicables</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ASTM D1586</span>
+                                    <span class="spec-value">Standard Test Method for SPT</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">ASTM D6066</span>
+                                    <span class="spec-value">SPT con energía controlada</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">NTP 339.133</span>
+                                    <span class="spec-value">Norma Técnica Peruana</span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <span class="spec-label">E.050</span>
+                                    <span class="spec-value">Suelos y Cimentaciones (RNE)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-tools"></i> Equipo Utilizado</h3>
+                        <ul class="documents-list">
+                            <li><i class="fas fa-hammer"></i> Martillo 63.5 kg</li>
+                            <li><i class="fas fa-ruler-vertical"></i> Caída libre 76 cm</li>
+                            <li><i class="fas fa-box"></i> Muestreador cuchara partida</li>
+                            <li><i class="fas fa-circle"></i> Diámetro ext. 51 mm</li>
+                            <li><i class="fas fa-circle"></i> Diámetro int. 35 mm</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORRELACIONES -->
+    <section class="section applications-section" id="correlaciones">
+        <div class="container">
+            <div class="section-header">
+                <h2>Correlaciones del Valor N-SPT</h2>
+                <p>Interpretación del número de golpes según el tipo de suelo</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="table-cell">Tipo de Suelo</div>
+                    <div class="table-cell">N-SPT</div>
+                    <div class="table-cell">Compacidad / Consistencia</div>
+                    <div class="table-cell">Descripción</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell" rowspan="5"><strong>Suelos Granulares<br>(Arenas, Gravas)</strong></div>
+                    <div class="table-cell active">0 - 4</div>
+                    <div class="table-cell">Muy suelta</div>
+                    <div class="table-cell">Fácilmente penetrable</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell active">4 - 10</div>
+                    <div class="table-cell">Suelta</div>
+                    <div class="table-cell">Requiere mejoramiento</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell active">10 - 30</div>
+                    <div class="table-cell">Medianamente densa</div>
+                    <div class="table-cell">Aceptable para cimentaciones</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell active">30 - 50</div>
+                    <div class="table-cell">Densa</div>
+                    <div class="table-cell">Buena capacidad portante</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell active">> 50</div>
+                    <div class="table-cell">Muy densa</div>
+                    <div class="table-cell">Excelente para cimentaciones</div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="table-cell">Tipo de Suelo</div>
+                    <div class="table-cell">N-SPT</div>
+                    <div class="table-cell">Consistencia</div>
+                    <div class="table-cell">Resistencia (qu) aprox.</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="table-cell" rowspan="6"><strong>Suelos Cohesivos<br>(Arcillas, Limos)</strong></div>
+                    <div class="table-cell active">0 - 2</div>
+                    <div class="table-cell">Muy blanda</div>
+                    <div class="table-cell">
+                        < 0.25 kg/cm²</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell active">2 - 4</div>
+                        <div class="table-cell">Blanda</div>
+                        <div class="table-cell">0.25 - 0.50 kg/cm²</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell active">4 - 8</div>
+                        <div class="table-cell">Media</div>
+                        <div class="table-cell">0.50 - 1.00 kg/cm²</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell active">8 - 15</div>
+                        <div class="table-cell">Firme</div>
+                        <div class="table-cell">1.00 - 2.00 kg/cm²</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell active">15 - 30</div>
+                        <div class="table-cell">Muy firme</div>
+                        <div class="table-cell">2.00 - 4.00 kg/cm²</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell active">> 30</div>
+                        <div class="table-cell">Dura</div>
+                        <div class="table-cell">> 4.00 kg/cm²</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- APLICACIONES -->
+    <section class="section methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aplicaciones del Ensayo SPT</h2>
+                <p>El SPT proporciona información fundamental para el diseño geotécnico</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Diseño de Cimentaciones</h3>
+                    <p>Determinación de la capacidad portante admisible para zapatas, losas y cimentaciones profundas.
+                    </p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Capacidad portante qadm</li>
+                        <li><i class="fas fa-check"></i> Profundidad de desplante</li>
+                        <li><i class="fas fa-check"></i> Tipo de cimentación requerida</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Potencial de Licuefacción</h3>
+                    <p>Evaluación del riesgo de licuefacción en suelos arenosos saturados bajo carga sísmica.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Factor de seguridad FSL</li>
+                        <li><i class="fas fa-check"></i> Corrección por nivel freático</li>
+                        <li><i class="fas fa-check"></i> Índice de licuefacción</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Estratigrafía del Subsuelo</h3>
+                    <p>Identificación de las capas de suelo y su variación con la profundidad.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Perfil estratigráfico</li>
+                        <li><i class="fas fa-check"></i> Clasificación SUCS</li>
+                        <li><i class="fas fa-check"></i> Nivel freático</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Parámetros Geotécnicos</h3>
+                    <p>Correlaciones empíricas para estimar propiedades mecánicas del suelo.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ángulo de fricción (f)</li>
+                        <li><i class="fas fa-check"></i> Módulo de elasticidad (E)</li>
+                        <li><i class="fas fa-check"></i> Cohesión no drenada (Cu)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section" id="contact-section">
+        <div class="container">
+            <div class="cta-card spt-cta">
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <i class="fas fa-certificate"></i> Ensayo Normalizado ASTM
+                    </div>
+                    <h2>¿Necesita un estudio de suelos con SPT?</h2>
+                    <p>Realizamos ensayos SPT con equipo calibrado y personal experimentado. Obtenga la información
+                        geotécnica que necesita para su proyecto.</p>
+
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Profundidades hasta 30m+</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Muestreo continuo</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Ensayos de laboratorio</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Informe geotécnico completo</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="index.html#cotizacion" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+51921593127" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Consulta Técnica
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-image">
+                    <img src="imagenes/perforacioneje3.jpeg" alt="Ensayo SPT" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes sobre SPT</h2>
+                <p>Información importante sobre el ensayo de penetración estándar</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuántos sondeos SPT necesito para mi proyecto?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Según la Norma E.050, el número mínimo de puntos de investigación depende del tipo de
+                            edificación y área: Para viviendas unifamiliares: 1 sondeo por cada 450 m² o mínimo 3 por
+                            edificación. Para edificios: 1 sondeo cada 225-400 m². Para estructuras especiales: estudio
+                            específico. Siempre se recomienda al menos 3 puntos para definir la variabilidad del
+                            terreno.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Hasta qué profundidad se realiza el SPT?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La profundidad mínima recomendada es: Df + 1.5B (donde Df es profundidad de desplante y B es
+                            el ancho de la cimentación), o cuando se alcanza material muy resistente (N>50 golpes
+                            sostenido). Para edificaciones comunes: mínimo 6-10 metros. Para edificios altos: 15-30
+                            metros o hasta estrato firme. La norma E.050 establece criterios específicos según el tipo
+                            de proyecto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué significa cuando el SPT da "rechazo"?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Se considera "rechazo" cuando se requieren más de 50 golpes para penetrar 15 cm, o cuando no
+                            hay avance después de 10 golpes consecutivos. Esto indica la presencia de material muy denso
+                            (grava compacta), roca meteorizada, o material cementado. Se reporta como N>50 o R
+                            (rechazo), y generalmente indica excelentes condiciones para cimentación.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué correcciones se aplican al valor N?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Las correcciones más importantes son: Corrección por energía (N60): ajuste a 60% de energía
+                            de referencia. Corrección por sobrecarga (CN): para profundidades mayores. Corrección por
+                            nivel freático: en arenas sumergidas. Corrección por diámetro del sondeo, longitud de
+                            barras, y tipo de muestreador. El valor corregido (N1)60 se usa para análisis de
+                            licuefacción y correlaciones avanzadas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué incluye el informe del estudio SPT?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El informe incluye: 1) Registros de perforación con valores N por metro, 2) Perfil
+                            estratigráfico del subsuelo, 3) Nivel freático, 4) Ensayos de laboratorio (granulometría,
+                            límites, humedad), 5) Clasificación SUCS de cada estrato, 6) Capacidad portante admisible,
+                            7) Tipo y profundidad de cimentación recomendada, 8) Conclusiones y recomendaciones
+                            geotécnicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo GEODINA">
+                        <div class="logo-text">
+                            <h3>GEODINA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Laboratorio especializado en estudios de suelos y exploración
+                        geotécnica para proyectos de construcción.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" style="display:none"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn" style="display:none"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram" style="display:none"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios Relacionados</h4>
+                    <ul class="footer-links">
+                        <li><a href="perforacion-diamantina.html">Perforación Diamantina</a></li>
+                        <li><a href="masw.html">Estudio MASW - Vs30</a></li>
+                        <li><a href="refraccion-sismica.html">Refracción Sísmica</a></li>
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="articulo-suelos.html">Análisis Geotécnicos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+51921593127">+51 921 593 127</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:GEODINAlab@gmail.com">GEODINAlab@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Normativas</h4>
+                    <div class="certifications-grid" style="gap: 0.5rem;">
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-file-alt"></i>
+                            <h4 style="font-size: 0.75rem;">ASTM D1586</h4>
+                        </div>
+                        <div class="cert-card" style="padding: 0.75rem;">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4 style="font-size: 0.75rem;">E.050</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio GEODINA. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidad.html">Política de Privacidad</a>
+                    <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    <a href="index.html">Volver al Inicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Ensayo%20SPT"
+            class="whatsapp-float" target="_blank" aria-label="Chat por WhatsApp sobre SPT">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">Consulta sobre SPT</span>
+        </a>
+        <a href="#" class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

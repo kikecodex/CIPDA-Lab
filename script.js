@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initModal();
     
-    console.log('Laboratorio CIPDA - Sitio web cargado y listo');
+    console.log('Laboratorio GEODINA - Sitio web cargado y listo');
 });
 
 // ===== NAVEGACIÓN RESPONSIVE =====
@@ -308,10 +308,10 @@ function downloadQuote() {
         </head>
         <body>
             <div class="header">
-                <div class="logo">CIPDA LABORATORIO</div>
+                <div class="logo">GEODINA LABORATORIO</div>
                 <div class="title">COTIZACIÓN DE SERVICIOS</div>
                 <div>Fecha: ${new Date().toLocaleDateString()}</div>
-                <div>Código: CIPDA-${Date.now().toString().slice(-6)}</div>
+                <div>Código: GEODINA-${Date.now().toString().slice(-6)}</div>
             </div>
             
             <div class="section">
@@ -345,8 +345,8 @@ function downloadQuote() {
             </div>
             
             <div class="footer">
-                <p>Laboratorio CIPDA - Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
-                <p>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash | Tel: +51 921 593 127 | cipdalab@gmail.com</p>
+                <p>Laboratorio GEODINA - Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                <p>Av. Confraternidad Int. Oeste 589, Huaraz, Ancash | Tel: +51 921 593 127 | GEODINAlab@gmail.com</p>
                 <p>Esta cotización es válida por 30 días a partir de la fecha de emisión</p>
             </div>
         </body>
@@ -358,7 +358,7 @@ function downloadQuote() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `Cotizacion_CIPDA_${Date.now()}.pdf`;
+    a.download = `Cotizacion_GEODINA_${Date.now()}.pdf`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

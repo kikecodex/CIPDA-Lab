@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Control de Compactación en Campo - GEODINA. Densidad de campo, cono de arena, densímetro nuclear. Verificación de terraplenes.">
+    <meta name="keywords"
+        content="densidad campo, compactación, cono arena, densímetro nuclear, proctor, terraplén, control calidad">
+    <meta name="author" content="Laboratorio GEODINA">
+    <title>Control de Compactación | GEODINA Lab - Densidad de Campo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="imagenes/LOGO1.png" alt="Logo Laboratorio GEODINA">
+                <div class="logo-text">
+                    <h1>GEODINA</h1>
+                    <span>Centro de Investigación y Pruebas de Diagnóstico Ambiental</span>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="index.html#servicios" class="nav-link"><i class="fas fa-flask"></i> Servicios</a></li>
+                    <li><a href="index.html#galeria" class="nav-link"><i class="fas fa-images"></i> Proyectos</a></li>
+                    <li><a href="index.html#cotizacion" class="nav-link"><i class="fas fa-file-invoice-dollar"></i>
+                            Cotización</a></li>
+                    <li><a href="index.html#contacto" class="nav-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+                <div class="header-contact">
+                    <a href="tel:+51921593127" class="phone-link">
+                        <i class="fas fa-phone"></i> +51 921 593 127
+                    </a>
+                </div>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="service-hero compaction-hero">
+        <div class="hero-background"
+            style="background-image: linear-gradient(rgba(139, 90, 43, 0.8), rgba(101, 67, 33, 0.9)), url('imagenes/CBR_CANTERA.jpeg');">
+        </div>
+
+        <div class="container hero-content">
+            <nav class="breadcrumb" aria-label="Ruta de navegación">
+                <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="index.html#servicios">Servicios</a>
+                <i class="fas fa-chevron-right"></i>
+                <span class="current">Control de Compactación</span>
+            </nav>
+
+            <div class="hero-text">
+                <div class="service-badge">
+                    <i class="fas fa-road"></i> Control de Calidad en Campo
+                </div>
+                <h1 class="hero-title">Control de <span class="highlight">Compactación</span></h1>
+                <p class="hero-subtitle">Verificación del grado de compactación en terraplenes, rellenos y bases de
+                    pavimentos</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">95%+</span>
+                        <span class="stat-label">Grado mínimo típico</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">In Situ</span>
+                        <span class="stat-label">Ensayo en campo</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Resultados</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">NTP</span>
+                        <span class="stat-label">339.143</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact-section" class="btn btn-primary">
+                        <i class="fas fa-clipboard-list"></i> Solicitar Control
+                    </a>
+                    <a href="#metodos" class="btn btn-outline">
+                        <i class="fas fa-list"></i> Ver Métodos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- MÉTODOS -->
+    <section class="section applications-section" id="metodos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Métodos de Control de Compactación</h2>
+                <p>Técnicas normalizadas para verificar la densidad alcanzada en campo</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3>Cono de Arena</h3>
+                    <p>Método tradicional para determinar la densidad in situ del suelo compactado</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Densidad húmeda y seca</li>
+                        <li><i class="fas fa-check"></i> Contenido de humedad</li>
+                        <li><i class="fas fa-check"></i> Grado de compactación</li>
+                        <li><i class="fas fa-check"></i> Norma ASTM D1556</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-radiation-alt"></i>
+                    </div>
+                    <h3>Densímetro Nuclear</h3>
+                    <p>Método rápido y no destructivo para control de compactación en obra</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Resultados en minutos</li>
+                        <li><i class="fas fa-check"></i> No destructivo</li>
+                        <li><i class="fas fa-check"></i> Alto rendimiento</li>
+                        <li><i class="fas fa-check"></i> Norma ASTM D6938</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Método del Balón de Caucho</h3>
+                    <p>Alternativa al cono de arena para suelos con partículas gruesas</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Suelos granulares gruesos</li>
+                        <li><i class="fas fa-check"></i> Gravas y material de cantera</li>
+                        <li><i class="fas fa-check"></i> ASTM D2167</li>
+                    </ul>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Proctor de Referencia</h3>
+                    <p>Ensayo de laboratorio para determinar la densidad máxima de referencia</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Proctor Estándar (ASTM D698)</li>
+                        <li><i class="fas fa-check"></i> Proctor Modificado (ASTM D1557)</li>
+                        <li><i class="fas fa-check"></i> Densidad máxima seca</li>
+                        <li><i class="fas fa-check"></i> Humedad óptima</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APLICACIONES -->
+    <section class="section methodology-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aplicaciones del Control de Compactación</h2>
+                <p>Verificación de calidad en diversas obras de construcción</p>
+            </div>
+
+            <div class="applications-grid">
+                <div class="application-card">
+                    <div class="app-icon"><i class="fas fa-road"></i></div>
+                    <h3>Carreteras y Pavimentos</h3>
+                    <p>Control de subrasante, sub-base, base granular y carpeta asfáltica.</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon"><i class="fas fa-building"></i></div>
+                    <h3>Edificaciones</h3>
+                    <p>Verificación de rellenos controlados para cimentaciones y plateas.</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon"><i class="fas fa-water"></i></div>
+                    <h3>Presas y Diques</h3>
+                    <p>Control de terraplenes, núcleo impermeable y espaldones.</p>
+                </div>
+
+                <div class="application-card">
+                    <div class="app-icon"><i class="fas fa-plane"></i></div>
+                    <h3>Aeropuertos</h3>
+                    <p>Control de pistas, taxiways y plataformas de estacionamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section" id="contact-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <i class="fas fa-hard-hat"></i> Servicio en Campo
+                    </div>
+                    <h2>¿Necesita control de compactación en su obra?</h2>
+                    <p>Contamos con equipos calibrados y técnicos experimentados para realizar controles de densidad en
+                        cualquier ubicación.</p>
+
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atención inmediata</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resultados en 24h</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Certificados oficiales</span>
+                        </div>
+                        <div class="cta-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Cobertura regional</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="index.html#cotizacion" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+51921593127" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> Llamar Ahora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cta-image">
+                    <img src="imagenes/CBR_CANTERA.jpeg" alt="Control de compactación" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="imagenes/LOGO1.png" alt="Logo GEODINA">
+                        <div class="logo-text">
+                            <h3>GEODINA</h3>
+                            <p>Centro de Investigación y Pruebas de Diagnóstico Ambiental</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Control de calidad en campo para proyectos de construcción e
+                        infraestructura.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" style="display:none"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/51921593127" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="ensayos-concreto.html">Ensayos de Concreto</a></li>
+                        <li><a href="index.html#servicios">Mecánica de Suelos</a></li>
+                        <li><a href="ensayos-spt.html">Ensayos SPT</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i><a href="tel:+51921593127">+51 921 593 127</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:GEODINAlab@gmail.com">GEODINAlab@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Laboratorio GEODINA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTONES FLOTANTES -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/51921593127?text=Hola,%20me%20interesa%20el%20servicio%20de%20Control%20de%20Compactación"
+            class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
